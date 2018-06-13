@@ -5,7 +5,7 @@ function render_globe(){
     height = canvas.property("height"),
     context = canvas.node().getContext("2d");
 
-var projection = d3.geoOrthographic()
+ var projection = d3.geoOrthographic()
     .scale((height - 10) / 2)
     .translate([width / 2, height / 2])
     .precision(0.1);
@@ -16,7 +16,7 @@ var path = d3.geoPath()
 
 canvas.call(d3.drag()
     .on("start", dragstarted)
-    .on("drag", dragged));
+    .on("drag", dragged));    
 
 var render = function() {},
     v0, // Mouse position in Cartesian coordinates at start of drag gesture.
@@ -41,14 +41,25 @@ d3.json("https://unpkg.com/world-atlas@1/world/110m.json", function(error, world
   if (error) throw error;
 
   var sphere = {type: "Sphere"},
-      land = topojson.feature(world, world.objects.land);
+      land = topojson.feature(world, world.objects.land),
+      countries = topojson.feature(world,world.objects.countries);
+console.log(world);
 
   render = function() {
     context.clearRect(0, 0, width, height);
     context.beginPath(), path(sphere), context.fillStyle = "#fff", context.fill();
-    context.beginPath(), path(land), context.fillStyle = "#000", context.fill();
+    context.beginPath(), path(land), context.fillStyle = "#abcdef", context.fill();
+    context.beginPath(), path(countries), context.fillStyle = "#000", context.stroke();
     context.beginPath(), path(sphere), context.stroke();
+
+   
+
   };
+
+  canvas.on("click",function(d){
+            // console.log(d3.mouse(this));
+            
+        })
 
   render();
 });

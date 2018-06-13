@@ -10,10 +10,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
     <!-- D3 SCRIPTS  FOR RENDER GLOBE-->
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://unpkg.com/topojson-client@2"></script>
-    <script src="/javascripts/versor.js"></script>
-    <script src="/javascripts/render_globe.js"></script>
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@2"></script> -->
+
+    <!-- CHANGED ABOVE D3V4 SOURCE TO V3 TO INCLUDE ZOOM  -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <!-- <script src="/javascripts/versor.js"></script> -->
+    <!-- <script src="/javascripts/render_globe.js"></script> -->
+    <script src="/javascripts/render_map.js"></script>
+    <script src="/javascripts/reload_map_d3.js"></script>
     
     
     <!-- MAIN SCRIPT -->
@@ -45,15 +52,17 @@
     <!-- HEADER YEAR SECTION ENDS -->
 
      <!-- INSERT PAGE BREAKS TO POSITION THE CANVAS PROPERLY -->   
-     <br /><br /><br /><br /><br /><br /><br />
-
+     <br /><br /><br />
     <div id="container">
       <div >
        
-            <canvas id="globe" width="860" height="600"></cavnas>
+            <!-- <canvas id="globe" width="860" height="600"></cavnas> -->
+              <svg id="globe"></svg>
+            
       </div>
-      <div>
-<!-- 
+    
+      
+        <!-- 
         <article id="event">
          
           kaustav

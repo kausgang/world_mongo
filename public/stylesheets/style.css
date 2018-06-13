@@ -63,19 +63,28 @@ input{
 } */
 
 
-canvas{
+#globe{
   float: left;
   /* hide the border tag */
-  /* border: 1px solid blue */
+  /* border: 1px solid blue; */
+  padding: 50px
 }
 
 
-article {
+event {
   /* float: right; */
   margin-left: 170px;
-  border-left: 1px solid gray;
-  padding: 1em;
+  border-left: 10px solid gray;
+  /* padding: 10em; */
+  padding-left: 50px;
   overflow: hidden;
 }
 
-
+h1 {
+  position: absolute;
+  top: 500px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  width: 960px;
+}
