@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   var host = req.headers.host; 
 
 
-console.log(host);
+// console.log(host);
 
   var year = req.query.year;
   console.log(year);
@@ -53,6 +53,11 @@ function get_content(year,host,res){
 
   var csv_filename = 'http://'+host+'/country.csv';
 
-  res.send(csv_filename); //sending the url to access the file on server, sometimes  chrome cannlot load local file in 
+  var obj = {
+    content: data,
+    csv_filename: csv_filename
+  }
+
+  res.send(obj); //sending the url to access the file on server, sometimes  chrome cannlot load local file in 
 }
 module.exports = router;

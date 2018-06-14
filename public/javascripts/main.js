@@ -54,9 +54,9 @@ function on_year(){
 
 function display_year(year){
     
-    var text_area = $('#event'); //GET THE TEXT VIEWING AREA
+    
     var parameter = { year: year };
-    $.get('/get_content',parameter,function(country_filename){
+    $.get('/get_content',parameter,function(obj){
 
         // console.log(data);
 
@@ -71,13 +71,13 @@ function display_year(year){
 
         
         // })
+        var country_filename = obj.csv_filename;
+        var content = obj.content;
 
-        reload_map_d3(country_filename)
+        // console.log(obj);
+        reload_map_d3(country_filename,content,year)
 
-        // var a = country[1];
-         // https://stackoverflow.com/questions/922544/using-variable-keys-to-access-values-in-javascript-objects?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-         // get the content from file and show here
-        //  text_area.html(data[a]); //CHANGE INSIDE HTML()
+        
     })
 
   

@@ -67,7 +67,8 @@ d3.json("https://raw.githubusercontent.com/kausgang/interactive_world_map/master
 
                 //add the country name in class attribute so that later it can be retrieved
                 
-                return d.properties.BRK_NAME;
+                // return d.properties.BRK_NAME; //THIS WORKS TOO
+                return d.properties.NAME;
             })
             .attr("d",path)
             .attr("fill","#abcdef") //to show the land
@@ -76,8 +77,9 @@ d3.json("https://raw.githubusercontent.com/kausgang/interactive_world_map/master
             .on("click",function(d){
                 // console.log(this);
                 var x = this.getAttribute("class"); //return the country name
-                console.log(x)
-                // alert(d3.select(this).class);
+                //console.log(x)
+
+                 alert('Select year to know if history is available for '+x);
             })
             
     

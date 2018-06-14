@@ -67,9 +67,12 @@ input{
   float: left;
   /* hide the border tag */
   /* border: 1px solid blue; */
-  padding: 50px
+  padding-right: 50px
 }
 
+#country_with_history{
+  fill: red
+}
 
 event {
   /* float: right; */
@@ -80,11 +83,11 @@ event {
   overflow: hidden;
 }
 
-h1 {
+/* h1 {
   position: absolute;
   top: 500px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   text-align: center;
   width: 960px;
-}
+} */
