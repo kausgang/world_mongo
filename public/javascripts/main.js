@@ -11,6 +11,7 @@ $(document).ready(function () {
     // render_globe();
     // LOAD THE INTERACTIVE MAP
     render_map();
+    
 
     // MOVE THE SLIDER AND ADJUST YEAR IN INPUT BOX
     slider.oninput = function() {
