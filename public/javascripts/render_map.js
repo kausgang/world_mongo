@@ -71,8 +71,7 @@ d3.json("https://raw.githubusercontent.com/kausgang/interactive_world_map/master
                 return d.properties.NAME;
             })
             .attr("d",path)
-            .attr("fill","#abcdef") //to show the land
-            .attr("stroke","#000000") //to divide the countries
+       
             
             .on("click",function(d){
                 // console.log(this);
@@ -82,7 +81,7 @@ d3.json("https://raw.githubusercontent.com/kausgang/interactive_world_map/master
                  alert('Select year to know if history is available for '+x);
             })
             
-    
+        
     redraw();       // update path data
 });
    

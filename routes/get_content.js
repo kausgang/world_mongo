@@ -24,40 +24,63 @@ function get_content(year,host,res){
 
   var filename = path.join(__dirname,'../public/DATABASE/'+year+'.json');
 
-  // console.log(filename);
+  console.log(filename);
+  var data;
+  var db_found = true;
 
-  
+  fs.exists(filename,function(exists){
 
-  var content = fs.readFileSync(filename);
+    if(exists){
+      var content = fs.readFileSync(filename);
 
-  var data = JSON.parse(content);
-  // console.log(data);
-
-
-  //get the country name and write in a file for d3
-  
-  var country_filename = path.join(__dirname,'../public/country.csv');
-  fs.writeFileSync(country_filename,'country\n') //CREATING HEADER FOR THE CSV FILE
-  var i =1; //first value is "year"
-
-  Object.keys(data).forEach(function(key){
-    var value = data[key];
-    // console.log(key + ':####' + value);
-     
-    if(i!=1) //THE FIRST VALUE IS "year"
-    fs.appendFileSync(country_filename,key+'\n');
-    i++;
+      data = JSON.parse(content);
+      console.log(data);
     
-  });
+    
+      //get the country name and write in a file for d3
+      
+      var country_filename = path.join(__dirname,'../public/country.csv');
+      fs.writeFileSync(country_filename,'country\n') //CREATING HEADER FOR THE CSV FILE
+      var i =1; //first value is "year"
+    
+      Object.keys(data).forEach(function(key){
+        var value = data[key];
+        // console.log(key + ':####' + value);
+         
+        if(i!=1) //THE FIRST VALUE IS "year"
+        fs.appendFileSync(country_filename,key+'\n');
+        i++;
+        
+      });
+    
 
+      var csv_filename = 'http://'+host+'/country.csv';
 
-  var csv_filename = 'http://'+host+'/country.csv';
+      var obj = {
+        content: data,
+        csv_filename: csv_filename,
+        file_present: db_found
+      }
+    
+      res.send(obj); //sending the url to access the file on server, sometimes  chrome cannlot load local file in 
 
-  var obj = {
-    content: data,
-    csv_filename: csv_filename
-  }
+    }
+    else{
+      
+      db_found = false;
+      var obj = {
+        // content: data,
+        csv_filename: csv_filename,
+        file_present: db_found
+      }
+    
+      res.send(obj);
+    }
 
-  res.send(obj); //sending the url to access the file on server, sometimes  chrome cannlot load local file in 
+  })
+
+ 
+
+ 
 }
 module.exports = router;

@@ -45,11 +45,13 @@ a {
 
 input{
   text-align: center;
+  
 }
 
 .select_year{
-  padding-right: 0.5%;
+  padding-right: 0.5%;   
 }
+
 
 
 #container {
@@ -58,36 +60,82 @@ input{
 }
 
 
-/* div.globe{
-  width: 50%
-} */
+
 
 
 #globe{
   float: left;
   /* hide the border tag */
   /* border: 1px solid blue; */
-  padding-right: 50px
+  padding-right: 50px;
+  /* to show the lands */
+  fill: #cfcfcf; 
+  /* to show the borders */
+  stroke: #ffffff
 }
 
 #country_with_history{
   fill: red
 }
 
-event {
+#event {
   /* float: right; */
-  margin-left: 170px;
-  border-left: 10px solid gray;
+  /* margin-left: 170px; */
+  /* border-left: 1px solid gray; */
   /* padding: 10em; */
   padding-left: 50px;
   overflow: hidden;
+  /* text-align: center; */
+
 }
 
-/* h1 {
-  position: absolute;
-  top: 500px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  text-align: center;
-  width: 960px;
-} */
+#event_country{
+  padding-left: 50px;
+  overflow: hidden;
+  text-shadow:  9px 8px 0px rgba(0,0,0,0.05);
+}
+
+
+
+/* https://designshack.net/articles/css/5-simple-and-practical-css-list-styles-you-can-copy-and-paste/ */
+li {
+  font: 200 15px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+ 
+li:last-child {
+  border: none;
+}
+
+
+ 
+li:hover {
+  font-size: 28px;
+  background: #f6f6f6;
+}
+
+
+/* PREVIOUS NEXT BUTTON */
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;

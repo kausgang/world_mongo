@@ -12,6 +12,8 @@ function show_content(country_name,content,year){
     // FIX COUNTRY NAMES THAT DO NOT MATCH RECORD IN DATABASE
     if(country_name == 'United States of America')
         country_name = 'USA';
+    if(country_name == 'United Kingdom')
+        country_name = 'England';
 
         console.log(content[country_name]);
 
@@ -23,6 +25,7 @@ function show_content(country_name,content,year){
     content[country_name].forEach(element => {
         text_area.append(
             '<li class="event_list">'+element+'</li>'
+            // '<li class="event_list"><a href="#">'+element+'</a></li>'
         )
             
         });

@@ -81,7 +81,7 @@ function ready(error,world,names){
     //     .data(topojson.feature(world, world.objects.countries).features)
     //   .enter().append('path')
     var countries = topojson.feature(world,world.objects.ne_110m_admin_0_countries).features;
-    svg
+        svg
             .selectAll(".countries")
             // .selectAll("g")
             .data(countries)
@@ -101,8 +101,8 @@ function ready(error,world,names){
                 return d.properties.NAME;
             })
             .attr("d",path)
-            .attr("fill","#abcdef") //to show the land
-            .attr("stroke","#000000") //to divide the countries
+            // .attr("fill","#abcdef") //to show the land
+            // .attr("stroke","#000000") //to divide the countries
             
             .on("click",function(d){
                 // console.log(this);
@@ -120,6 +120,8 @@ function ready(error,world,names){
                 //Push to the list the name returned by map
                 if(list_of_country.includes('USA'))
                     list_of_country.push('United States of America');
+                if(list_of_country.includes('England'))
+                    list_of_country.push('United Kingdom');
                 
 
                 if(list_of_country.includes(country_name))
@@ -127,15 +129,8 @@ function ready(error,world,names){
 
             })
             
-    // svg.selectAll(".countries1")
-    //         .data(names)
-    //         .attr("id",function(d){
 
-    //             var c = this.attr("class");
-    //             if(c == d)
-    //             return d;
-
-    //         })
+       
             
     
     redraw();       // update path data

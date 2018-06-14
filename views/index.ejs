@@ -40,43 +40,36 @@
     <div id='year_range'>
         <div class="slidecontainer" style="float:left;">
           <!-- CHANGE HERE the min and max range -->
-            <input type="range" min="1900" max="2000" value="1950" class="slider" id="myRange">
+            <input type="range" min="1" max="2000" value="1900" class="slider" id="myRange">
           </div>
          <div class="select_year" style="float:left;">
            <!-- CHANGE HERE the min and max range -->
-            <input type="number" min="1900" max="2000" id="year"> 
+            <input type="number" min="1" max="2000" id="year"> 
          </div>
          <div style="float:left;">
-            <input type="button" value="GO" id="submit" onclick="on_year()">
+            <!-- <input type="button" value="GO" id="submit" onclick="on_year()"> -->
+            <input type="image" src="images/button.jpg" width="22" height="22" alt="Search Year" id="submit" onclick="on_year()">
          </div>
       </div>
     <!-- HEADER YEAR SECTION ENDS -->
 
      <!-- INSERT PAGE BREAKS TO POSITION THE CANVAS PROPERLY -->   
-     <br /><br /><br />
+     <br /><br />
+     <!-- INSERT NEXT PREVIOUS BUTTON -->
+     <a href="#" class="previous round" onclick="previous_year()">&#8249;</a>
+     <a href="#" class="next round" onclick="next_year()">&#8250;</a>
+
     <div id="container">
       <div >
        
             <!-- <canvas id="globe" width="860" height="600"></cavnas> -->
               <svg id="globe"></svg>
             
-      </div>
+      </div id="text">
     
       
-        <!-- 
-        <article id="event">
-         
-          kaustav
-          <br /><br /><br /><br /><br /><br /><br />
-          London is the capital city of England. 
-          It is the most populous city in the  United Kingdom,
-           with a metropolitan area of over 13 million inhabitants.
-          Standing on the River Thames, London has been a major 
-          settlement for two millennia, its history going back 
-          to its founding by the Romans, who named it Londinium.
-
-        </article> -->
-        <p id="event_country"></p>
+        
+        <h1 id="event_country"></h1>
         <ul id="event"></ul>
 
       </div>       

@@ -71,11 +71,21 @@ function display_year(year){
 
         
         // })
+
+        var file_present = obj.file_present;
         var country_filename = obj.csv_filename;
         var content = obj.content;
 
-        // console.log(obj);
-        reload_map_d3(country_filename,content,year)
+        console.log(obj);
+        if(file_present){
+            
+            reload_map_d3(country_filename,content,year)
+        }          
+        else{
+            
+             alert(' data not found for the year '+year);
+        }
+            
 
         
     })
@@ -85,22 +95,34 @@ function display_year(year){
 }
 
 
-function get_country_list(data){
+function next_year(){
 
-    // var country = [];
-    Object.keys(data).forEach(function(key){
-        var value = data[key];
-        // console.log(key + ':####' + value);
+    //get the year from input box
+    var year = parseInt($('#year').val())+1;
+
+    // increment the year in input box
+    $('#year').val(year);
+
     
-        country.push(key);
-        
-        // return country;
-    });
+    //call display of the new year
+    display_year(year);
 
 }
 
 
+function previous_year(){
 
+    //get the year from input box
+    var year = parseInt($('#year').val())-1;
+
+    // increment the year in input box
+    $('#year').val(year);
+
+    
+    //call display of the new year
+    display_year(year);
+
+}
 
 
 
