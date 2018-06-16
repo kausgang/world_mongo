@@ -140,3 +140,12 @@ a:hover {
 .round {
   border-radius: 50%;
 }
+
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}

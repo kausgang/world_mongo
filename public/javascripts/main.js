@@ -76,7 +76,7 @@ function display_year(year){
         var country_filename = obj.csv_filename;
         var content = obj.content;
 
-        console.log(obj);
+        // console.log(obj);
         if(file_present){
             
             reload_map_d3(country_filename,content,year)

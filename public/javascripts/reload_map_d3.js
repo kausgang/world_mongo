@@ -68,13 +68,13 @@ function ready(error,world,names){
 
     if (error) throw error;
 
-    console.log(world);
-    console.log(names);
+    // console.log(world);
+    // console.log(names);
     var list_of_country = [];
     names.forEach(element => {
         list_of_country.push(element.country)
     });
-    console.log(list_of_country)
+    // console.log(list_of_country)
 
 
     // svg.selectAll('path')
@@ -107,10 +107,11 @@ function ready(error,world,names){
             .on("click",function(d){
                 // console.log(this);
                 var country_name = this.getAttribute("class"); //return the country name
-                console.log(country_name)
+                // console.log(country_name)
 
-                show_content(country_name,content,year)
-                // alert(d3.select(this).class);
+                show_personality(year,country_name);
+                show_content(country_name,content,year); //HANDLE THE DISPLAY CONTENT SECTION IN ANOTHER FILE
+                
             })
             .attr("id",function(d){
 

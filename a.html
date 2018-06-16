@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML5 SVG Image</title>
+
+      <script>
+      
+      
+      </script>
+     
+   <head>
+   <body>
+      <!-- <svg width="500" height="350">
+         <defs>
+            <clipPath id="myCircle">
+               <circle cx="250" cy="145" r="125" fill="#FFFFFF" />
+            </clipPath>
+         </defs>
+         <image width="500" height="350" xlink:href="https://www.tutorialspoint.com/videotutorials/images/coding_ground_home.jpg" clip-path="url(#myCircle)" />
+      </svg> -->
+
+    <div>
+            <svg height = "800" width = "800">
+                
+
+                        <defs>
+                                <pattern id = "attachedImage" height = "100%" width = "100%"            
+                                               patternContentUnits = "objectBoundingBox">
+                                   <image xlink:href = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Netaji_Subhas_Chandra_Bose.jpg/220px-Netaji_Subhas_Chandra_Bose.jpg" preserveAspectRatio = "none" 
+                                          width = "1" height = "1"/>
+                                </pattern>   
+                        </defs>
+                        <circle cx = "100" cy = "200" r = "50" fill = "url(#attachedImage)"/>
+                        <rect x="160" y="185" width="300" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+                        <!-- x = cx+r+10   y = cy-rect.height/2 -->
+                        <text x="470" y="200">xxddddddddddddddddddd</text>
+                        <!-- x = rect.x + rect.width + 10 + 10        y = rect.y + height/2-->
+
+
+
+
+                        <defs>
+                                <pattern id = "attachedImage2" height = "100%" width = "100%"            
+                                               patternContentUnits = "objectBoundingBox">
+                                   <image xlink:href = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Netaji_Subhas_Chandra_Bose.jpg/220px-Netaji_Subhas_Chandra_Bose.jpg" preserveAspectRatio = "none" 
+                                          width = "1" height = "1"/>
+                                </pattern>                                
+                        </defs>   
+                        <circle cx = "100" cy = "300" r = "50" fill = "url(#attachedImage2)"/>
+                        <!-- cx2 = cx1   cy2 = cy1+2*r-->
+                        <rect x="160" y="285" width="300" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+                        <text x="470" y="300">xxddddddddddddddddddd</text>
+                    
+                  </svg>
+      </div>
+   </body>
+</html>
