@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 // console.log(host);
 
   var year = req.query.year;
-  console.log(year);
+  // console.log(year);
 
   get_content(year,host,res);
 });
@@ -24,7 +24,7 @@ function get_content(year,host,res){
 
   var filename = path.join(__dirname,'../public/DATABASE/'+year+'.json');
 
-  console.log(filename);
+  // console.log(filename);
   var data;
   var db_found = true;
 
@@ -34,7 +34,7 @@ function get_content(year,host,res){
       var content = fs.readFileSync(filename);
 
       data = JSON.parse(content);
-      console.log(data);
+      // console.log(data);
     
     
       //get the country name and write in a file for d3
