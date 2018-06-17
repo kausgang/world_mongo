@@ -285,7 +285,7 @@ function show_personality(year,country_name){
 
                     var geography = d.geography;
                     if(geography == country_name){
-                        return text_y;
+                        return text_y + 5; //ADDING 5 PIXELS TO POSITION THE TEXT CORRECTLY
                     }
                 })
                 .text(function(d){

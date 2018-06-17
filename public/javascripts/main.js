@@ -43,6 +43,11 @@ $(document).ready(function () {
 
 //get the year when button is clicked
 function on_year(){
+
+     //CLEAR THE CONTENT OF EVENTS AND PERSONALITY
+     $('#event_country').html('');
+     $('#event').html('');
+     $('#personality').html('');
     var year = $('#year').val();
     display_year(year);
 }
@@ -60,17 +65,8 @@ function display_year(year){
 
         // console.log(data);
 
-        //CLEAR THE COUNTRY ARRAY FIRST
-        // country = [];
-
-        //HIGHLIGHT ALL THE COUNTRIES RETURNED BY QUERY
-        // get_country_list(data);
-        // console.log(country_filename);
-
-        // $.get('/redraw_map',null,function(res){
-
-        
-        // })
+       
+       
 
         var file_present = obj.file_present;
         var country_filename = obj.csv_filename;
