@@ -53,7 +53,7 @@ function show_personality(year,country_name){
             // var death_year = parseInt(element.died);
             var death_year;
         
-            console.log(element.died);
+            // console.log(element.died);
 
             if(element.died == '' ){
 
@@ -82,104 +82,11 @@ function show_personality(year,country_name){
 
 
 
-
-        /* svg.selectAll('.picture')
-            .data(formatted_array2)
-            .enter()
-            .append("defs")
-            .append("clipPath")
-                .attr("id","myCircle")
-            .append("circle")
-                .attr("cx","30")
-                .attr("cy",function(d,i){      //A WAY TO INCLUDE SERIAL DATA I
-                    return 10+i*20; //MODIFY THIS (I*X) TO CHANGE THE DISTANCE BETWEEN EACH BAR
-                })
-                .attr("r","30")
-                .attr("fill","#FFFFFF")
-                .attr("stroke","#000000")
-            
-
-
-        svg.selectAll('.picture')
-            .data(formatted_array2)
-            .enter()
-            .append("image")
-                .attr("clip-path","url(#myCircle)")
-                .attr("xlink:",function(d){
-
-                    return d.picture;
-                })
-
-
-
-
-    //    DRAW BARS
-        svg
-            .selectAll(".bar")
-            // .append("g")
-            // .data(age)
-            .data(formatted_array2)
-            .enter()
-            .append("rect")
-            .attr("x","30")
-            .attr("y",function(d,i){      //A WAY TO INCLUDE SERIAL DATA I
-                
-               
-                return 10+i*20; //MODIFY THIS (I*X) TO CHANGE THE DISTANCE BETWEEN EACH BAR
-            })
-            .attr("height", "10")   //MODIFY THIS TO CHANGE THE THICKNESS OF EACH BAR
-            .attr("width", function(d){
-               
-                // CHECK FOR COOUNTRY
-                var geography = d.geography;
-
-                if(geography == country_name){
-
-                    return (year - parseInt(d.born))*7; //MULTIPLYING WITH 7 SO THAT THE WIDTH TAKES UP SOME SPACE IN SVG
-                    
-                }
-               
-            })
-            .attr("class","bar")
-            .attr("id",function(d){
-
-                return d.wikipedia_url;
-            })
-            .attr("age",function(d){
-                return year - parseInt(d.born) + 1
-            })
-            
+        
        
-        //SET THE AGE NUMBER AT TOP OF EACH BAR
-        svg.selectAll('.bar_value')
-            .data(formatted_array2)
-            .enter()
-            .append("text")
-            // .attr("text-anchor", "middle")
-            .attr("x", function(d) { return (year - parseInt(d.born))*7 +32; })
-            .attr("y", function(d,i) { return 20+i*20; })
-            .text(function(d) { 
-                
-                var geography = d.geography;
-                if(geography == country_name){
-                    return year - parseInt(d.born) + 1
-                }
-                else    
-                    return '';
-                
-                
-             });
-
- */
 
 
-// var tip = d3.tip()
-// .attr('class', 'd3-tip')
-// .offset([-10, 0])
-// .html(function(d) {
-//     var age = (year - parseInt(d.born));
-//     return "<strong>Age:</strong> <span style='color:red'>" + age + "</span>";
-// })
+
 
 
       
@@ -212,6 +119,7 @@ function show_personality(year,country_name){
                     .attr("width","1")
                     .attr("height","1")
                     .attr("class","person_image")
+                    
 
 
         svg.selectAll("g")
@@ -229,7 +137,38 @@ function show_personality(year,country_name){
                     return "url(#attachedImage"+i;
                 })
                 .attr("class","person_circle")
+                .attr("name",function(d){
+                    return d.name;
+                })
+                //TOOLTIP DISPLAY
+                // https://www.youtube.com/watch?v=wsCOif7RMBo
+                .on('mouseover', function(d){
+
+                    tooltip.style("display",null)
+                })
+                .on('mouseout', function(d){
+
+                    tooltip.style("display","none")
+                })
+                .on('mousemove', function(d){
+
+                    var xpos = d3.mouse(this)[0] +15; //PUSH THE POSITION OF THE TOOLTIP A TILLE TO RIGHT
+                    var ypos = d3.mouse(this)[1] -55;
+                    tooltip.attr("transform","translate("+xpos+","+ypos+")");
+                    tooltip.select("text").text(d.name)
+
+                })
+               
+                //THIS IS ANOTHER WAY OF SHOWING TOOLTIP, BUT LESS EFFICIENT
+                // .append("svg:title")
+                // .text(function(d, i) { 
+                //     // return "My color is " + colors(i); 
+                //     return d.name;
+                // });
         
+                
+
+
         svg.selectAll("g")
             .data(formatted_array2)
             .enter()
@@ -254,8 +193,31 @@ function show_personality(year,country_name){
                 })
                 .attr("height",age_thickness)
                 .attr("class","person_age")
-                // .on('mouseover', tip.show)
-                // .on('mouseout', tip.hide)
+                .on('mouseover', function(){
+
+                    tooltip.style("display",null)
+                })
+                .on('mouseout', function(){
+
+                    tooltip.style("display","none")
+                })
+                .on('mousemove', function(d){
+
+                    var name = d.name;
+                    var age = (year - parseInt(d.born));
+                    
+                    var xpos = d3.mouse(this)[0] -15;
+                    var ypos = d3.mouse(this)[1] -55;
+                    tooltip.attr("transform","translate("+xpos+","+ypos+")");
+                    tooltip.select("text").text(function(d){
+
+                        
+                        
+                        return name + " was " + age + " years old in " + year;
+                    })
+
+                })
+                
 
                 
 
@@ -301,7 +263,17 @@ function show_personality(year,country_name){
 
 
 
-
+                //REMEMBER TO PLACE THE TOOLTIP VARIABLE IN THE END, 
+                // IF YOU PLACE IT RIGHT AFTER THE CIRCLE (WHERE IS IT USED FIRST), THE AGE BAR WILL NOT BE SHOWN
+                var tooltip = svg.append('g')
+                .attr("class",tooltip)
+                .style("display","none")
+                tooltip.append("text")
+                    .attr("x",15)
+                    .attr("dy","1.2em")
+                    .attr("font-size","1.2em")
+                    .attr("font-weight","bold")
+               
 
 
     })
@@ -310,6 +282,27 @@ function show_personality(year,country_name){
 
 
 
+
     
 
 }
+
+
+
+
+
+
+
+
+// function showTooltip(evt, text) {
+//     let tooltip = document.getElementById("tooltip");
+//     tooltip.innerHTML = text;
+//     tooltip.style.display = "block";
+//     tooltip.style.left = evt.pageX + 10 + 'px';
+//     tooltip.style.top = evt.pageY + 10 + 'px';
+//   }
+  
+//   function hideTooltip() {
+//     var tooltip = document.getElementById("tooltip");
+//     tooltip.style.display = "none";
+//   }

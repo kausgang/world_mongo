@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var get_content = require('./routes/get_content');
+var add_event = require('./routes/add_event');
+
 
 
 var app = express();
@@ -26,6 +28,7 @@ app.use('/users', usersRouter);
 
 
 app.use('/get_content',get_content);
+app.use('/add_event',add_event);
 
 
 

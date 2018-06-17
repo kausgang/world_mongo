@@ -121,4 +121,9 @@ function previous_year(){
 }
 
 
+// function add_event(){
 
+//     // $.get('/add_event')
+// }
+
+// function add_person(){}
