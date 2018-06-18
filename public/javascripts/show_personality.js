@@ -32,10 +32,19 @@ function show_personality(year,country_name){
 
         // FORMAT THE INPUT TO SELECT ONLY THE LIVING PERSONALITIES 
         // REMOVE ALL THE DATA THAT IS NOT LIVING IN CURRENT YEAR
+        var formatted_array = [];
         var formatted_array1 = [];
         var formatted_array2 = [];
-        //GET ALL PEOPLT WHO WAS BORM BEFORE CURRENT YEAR
+
+        // FIND ALL PEOPLE BELONGING TO SAME COUNTRY
         d.forEach(element => {
+            if(element.geography == country_name)
+                formatted_array.push(element);
+        });
+
+        //GET ALL PEOPLT WHO WAS BORM BEFORE CURRENT YEAR
+
+        formatted_array.forEach(element => {
 
             var birth_year = parseInt(element.born);
            
@@ -79,7 +88,7 @@ function show_personality(year,country_name){
             return parseInt(a.born) - parseInt(b.born)
         })
  
-
+        console.log(formatted_array2)
 
 
         

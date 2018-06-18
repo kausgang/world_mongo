@@ -30,7 +30,7 @@
             // THIS DATA VARIABLE IS COMING FROM COUNTRIES.JS FILE
             DATA.forEach(element => {
                 
-                // console.log(element.name);
+                console.log(element.name);
                 country.append('<option country="'+ element.name + '">' + element.name + '</option>')
             });
 
@@ -49,19 +49,21 @@
     
 
         <div class="form-style-6">
-                <h1>Enter Year & Country</h1>
+                <h1>Enter Personality Details</h1>
                 <!-- NOT TAKING TO ANY ACTION PAGE HERE, RATHER processing data with javascript -->
                 
-                <form action='/update_year'  id="form_data"> 
-                    <input type="number" min="1"  name="year" id="year" placeholder="Year" />
-                    <!-- <input type="text" name="country" id="country" placeholder="Country" /> -->
+                <form action='/update_person'  id="form_data"> 
+                    <!-- I HAD TO USE NAME TAG HERE AND NOT ID TAG SO AS TO MAKE IT RECOGNIZABLE IN /UPDATE_PERSON -->
+                    <input type="text"  name="name"  placeholder="Name" /> 
+                    <input type="number"  name="born" placeholder="Born" />
+                    <input type="number"  name="died" placeholder="Died" />
                     <select name="country" id="country">
                         <option value="" selected data-default>Select Country</option>
                     </select>
+                    <input type="url"  name="picture" placeholder="Picture URL" />
+                    <input type="url"  name="wikipedia_url" placeholder="Wikipedia URL" />
                     
                     
-                    <textarea name="event" placeholder="Enter event description"></textarea>
-                    <!-- <input type="submit" value="Send"  /> -->
                     <input type="submit" />
                 </form>
 

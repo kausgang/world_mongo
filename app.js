@@ -11,8 +11,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var get_content = require('./routes/get_content');
 var add_event = require('./routes/add_event');
-var evaluate = require('./routes/evaluate');
+var update_year = require('./routes/update_year');
+var add_person = require('./routes/add_person');
+var update_person = require('./routes/update_person');
 var home = require('./routes/home');
+// var person_added = require('./routes/person_added');
 
 
 var app = express();
@@ -39,8 +42,12 @@ app.use('/users', usersRouter);
 app.use('/get_content',get_content);
 app.use('/add_event',add_event);
 
-app.use('/evaluate',evaluate);
+app.use('/update_year',update_year);
 app.use('/home', home); //used to redirecto to home page
+
+app.use('/add_person',add_person);
+app.use('/update_person',update_person);
+// app.use('/person_added',person_added);
 
 
 // app.get('/evaluate',function(req,res){

@@ -50,7 +50,7 @@ function update_year(year,country,event,res){
           country: country,
           event: event
         }
-        res.render('evaluate',param)
+        res.render('update_year',param)
       } 
       else{ //FILE EXISTS BUT COUNTRY DOESNOT
         // CREATE A NEW ARRAY TO HOLD THE EVENT AND CREATE A OBJECT TO HOLD THE COUNTRY DATA
@@ -68,7 +68,7 @@ function update_year(year,country,event,res){
           country: country,
           event: event
         }
-        res.render('evaluate',param)
+        res.render('update_year',param)
 
       }
     }
@@ -89,7 +89,7 @@ function update_year(year,country,event,res){
          country: country,
          event: event
       }
-       res.render('evaluate',param)
+       res.render('update_year',param)
 
     }
   })

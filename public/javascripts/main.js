@@ -25,6 +25,10 @@ $(document).ready(function () {
 
         if(e.keyCode === 13) {
          
+            //CLEAR THE CONTENT OF EVENTS AND PERSONALITY
+            $('#event_country').html('');
+            $('#event').html('');
+            $('#personality').html('');
             
             //get the year and
             var year = $('#year').val();
