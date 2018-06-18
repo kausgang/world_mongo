@@ -10,8 +10,39 @@
 
     <link rel='stylesheet' href='/stylesheets/add_event.css' />
 
-    <!-- <script src='javascripts/add_event.js'></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
 
+    <!-- ADD COUNTRY NAMES DYNAMICALLY
+    https://css-tricks.com/dynamic-dropdowns/
+    SOURCE https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json -->
+
+    <!-- LOAD JSON DATA QUICKLY
+    https://stackoverflow.com/questions/7346563/loading-local-json-file -->
+    <script src="countries.js"></script>
+    <!-- I HAD TO CHANGE NAMES OF UNITED STATES OF AMERICA AND UNITED KINGDOM TO USA AND ENGLAND FOR MY PROJECT NEED -->
+
+    <script>
+        $(document).ready(function () {
+            
+            var country = $('#country');
+
+            // THIS DATA VARIABLE IS COMING FROM COUNTRIES.JS FILE
+            DATA.forEach(element => {
+                
+                // console.log(element.name);
+                country.append('<option country="'+ element.name + '">' + element.name + '<option>')
+            });
+
+
+            // CHECK IF YEAR IS NOT A FRACTION
+            // YEAR MORE THAN 2000 CAN BE ENTERED
+
+
+        })
+     
+    
+    </script>
    
 </head>
 <body>
@@ -23,7 +54,11 @@
                 
                 <form action='/evaluate'  id="form_data"> 
                     <input type="number" min="1"  name="year" id="year" placeholder="Year" />
-                    <input type="text" name="country" id="country" placeholder="Country" />
+                    <!-- <input type="text" name="country" id="country" placeholder="Country" /> -->
+                    <select name="country" id="country">
+                        <option></option>
+                    </select>
+                    
                     
                     <textarea name="event" placeholder="Enter event description"></textarea>
                     <!-- <input type="submit" value="Send"  /> -->

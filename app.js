@@ -12,7 +12,7 @@ var usersRouter = require('./routes/users');
 var get_content = require('./routes/get_content');
 var add_event = require('./routes/add_event');
 var evaluate = require('./routes/evaluate');
-
+var home = require('./routes/home');
 
 
 var app = express();
@@ -40,6 +40,8 @@ app.use('/get_content',get_content);
 app.use('/add_event',add_event);
 
 app.use('/evaluate',evaluate);
+app.use('/home', home); //used to redirecto to home page
+
 
 // app.get('/evaluate',function(req,res){
 
