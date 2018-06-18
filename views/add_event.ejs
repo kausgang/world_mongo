@@ -1,3 +1,5 @@
+<!-- copied from https://www.sanwebe.com/2014/08/css-html-forms-designs       Form Style 6 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel='stylesheet' href='/stylesheets/add_event.css' />
+
+    <!-- <script src='javascripts/add_event.js'></script> -->
+
+   
 </head>
 <body>
-    <hi>
-        hi
-    </hi>
+    
+
+        <div class="form-style-6">
+                <h1>Enter Year & Country</h1>
+                <!-- NOT TAKING TO ANY ACTION PAGE HERE, RATHER processing data with javascript -->
+                
+                <form action='/evaluate'  id="form_data"> 
+                    <input type="number" min="1"  name="year" id="year" placeholder="Year" />
+                    <input type="text" name="country" id="country" placeholder="Country" />
+                    
+                    <textarea name="event" placeholder="Enter event description"></textarea>
+                    <!-- <input type="submit" value="Send"  /> -->
+                    <input type="submit" />
+                </form>
+
+                
+
+        </div>
 </body>
 </html>

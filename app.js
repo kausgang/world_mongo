@@ -3,15 +3,24 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// var bodyParser     =         require("body-parser");
+
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var get_content = require('./routes/get_content');
 var add_event = require('./routes/add_event');
+var evaluate = require('./routes/evaluate');
 
 
 
 var app = express();
+
+
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,6 +38,18 @@ app.use('/users', usersRouter);
 
 app.use('/get_content',get_content);
 app.use('/add_event',add_event);
+
+app.use('/evaluate',evaluate);
+
+// app.get('/evaluate',function(req,res){
+
+//   console.log('heere')
+//   // return res.send(req.query);
+//   // res.send('<script>alert("s")</script>');
+//   // res.redirect('/')
+//   res.render('/evaluate')
+// });
+
 
 
 
