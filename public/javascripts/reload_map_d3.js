@@ -59,14 +59,69 @@ var svg = d3.select('#globe')
 
 queue()
     .defer(d3.json, "https://raw.githubusercontent.com/kausgang/interactive_world_map/master/ne_110m_admin_0_countries.json")
-    .defer(d3.tsv, csv_filename)
+    // .defer(d3.tsv, csv_filename)
+    .defer(d3.csv, csv_filename)
+    .defer(d3.csv, 'http://localhost:3000/PERSONALITY/personality.csv')
     .await(ready);
 
 
 // d3.json("https://raw.githubusercontent.com/kausgang/interactive_world_map/master/ne_110m_admin_0_countries.json", function(error, world){
-function ready(error,world,names){
+// function ready(error,world,names){
+function ready(error,world,names,person){ //ARGUMENTS HERE WILL BE IN ORDER OF THE DEFER STATEMENTS ABOVE
 
     if (error) throw error;
+
+
+    var formatted_array1 = [];
+    var formatted_array2 = [];
+    var geography = [];
+    //  console.log(person);
+    
+      // GET ALL THE PEOPLE LIVING IN THAT YEAR
+
+     person.forEach(element => {
+    
+        var birth_year = parseInt(element.born);
+           
+            if(birth_year <= year){ //all the people was born before this year
+
+                formatted_array1.push(element); 
+            }
+
+     
+    });
+
+
+    formatted_array1.forEach(element => {
+            
+        // var death_year = parseInt(element.died);
+        var death_year;
+    
+        // console.log(element.died);
+
+        if(element.died == '' ){
+
+            death_year = year+1;
+                       
+        }
+        else{
+            death_year = parseInt(element.died);
+        }
+        
+        if(year <= death_year){
+            
+            formatted_array2.push(element)
+        }
+    });
+
+    // FORMATTED ARRAY 2 IS LIVING IN THIS YEAR
+
+    formatted_array2.forEach(element => {
+        geography.push(element.geography)
+    });
+
+    // GEOGRAPHY ARRAY NOW CONTAINS ALL THE LIVING PERSONS COUNTRY
+   
 
     // console.log(world);
     // console.log(names);
@@ -126,7 +181,9 @@ function ready(error,world,names){
                 
 
                 if(list_of_country.includes(country_name))
-                    return 'country_with_history';
+                    return 'country_with_history'; //SHOW COUNTRY WHERE PERSONILITY IS AVAILABLE IN RED
+                if(geography.includes(country_name)) //SHOW COUNTRY WHERE PERSONILITY IS AVAILABLE IN A DIFFERENT COLOR
+                    return 'country_with_person';
 
             })
             

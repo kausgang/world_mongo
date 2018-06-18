@@ -104,7 +104,8 @@ function show_personality(year,country_name){
         var age_thickness = 15;
         
 
-        
+        // INCLUDE PICTURE IN SVG
+        // https://stackoverflow.com/questions/11496734/add-a-background-image-png-to-a-svg-circle-shape
         svg.selectAll("g")
             .data(formatted_array2)
             .enter()
@@ -129,11 +130,16 @@ function show_personality(year,country_name){
                     .attr("height","1")
                     .attr("class","person_image")
                     
-
-
+        // INCLUDE WIKIPEDIA LINK IN THE CIRCLE  
+        // https://alligator.io/svg/hyperlinks-svg/      
         svg.selectAll("g")
             .data(formatted_array2)
             .enter()
+            .append("a")
+                .attr("xlink:href",function(d){
+                    return d.wikipedia_url
+                })
+                .attr("target","_blank") //to open in new tab
             .append("circle")
                 .attr("cx",cx)
                 .attr("cy",function(d,i){
@@ -167,7 +173,7 @@ function show_personality(year,country_name){
                     tooltip.select("text").text(d.name)
 
                 })
-               
+                
                 //THIS IS ANOTHER WAY OF SHOWING TOOLTIP, BUT LESS EFFICIENT
                 // .append("svg:title")
                 // .text(function(d, i) { 
@@ -177,7 +183,7 @@ function show_personality(year,country_name){
         
                 
 
-
+        // SHOW THE BAR
         svg.selectAll("g")
             .data(formatted_array2)
             .enter()
@@ -303,15 +309,3 @@ function show_personality(year,country_name){
 
 
 
-// function showTooltip(evt, text) {
-//     let tooltip = document.getElementById("tooltip");
-//     tooltip.innerHTML = text;
-//     tooltip.style.display = "block";
-//     tooltip.style.left = evt.pageX + 10 + 'px';
-//     tooltip.style.top = evt.pageY + 10 + 'px';
-//   }
-  
-//   function hideTooltip() {
-//     var tooltip = document.getElementById("tooltip");
-//     tooltip.style.display = "none";
-//   }

@@ -78,6 +78,10 @@ input{
   fill: red
 }
 
+#country_with_person{
+  fill: blue
+}
+
 #event {
   /* float: right; */
   /* margin-left: 170px; */
