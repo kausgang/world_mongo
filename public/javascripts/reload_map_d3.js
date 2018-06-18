@@ -180,6 +180,14 @@ function ready(error,world,names,person){ //ARGUMENTS HERE WILL BE IN ORDER OF T
                     list_of_country.push('United Kingdom');
                 
 
+
+                if(geography.includes('USA'))
+                    geography.push('United States of America');
+                if(geography.includes('England'))
+                    geography.push('United Kingdom');
+
+
+
                 if(list_of_country.includes(country_name))
                     return 'country_with_history'; //SHOW COUNTRY WHERE PERSONILITY IS AVAILABLE IN RED
                 if(geography.includes(country_name)) //SHOW COUNTRY WHERE PERSONILITY IS AVAILABLE IN A DIFFERENT COLOR

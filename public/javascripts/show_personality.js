@@ -38,9 +38,32 @@ function show_personality(year,country_name){
 
         // FIND ALL PEOPLE BELONGING TO SAME COUNTRY
         d.forEach(element => {
-            if(element.geography == country_name)
+
+            // console.log(element.geography)
+            var c = element.geography;
+            // console.log(c)
+            if(c == "USA")
+                c = 'United States of America';
+                
+            if(c == "England")
+                c = 'United Kingdom';
+            
+                // if(element.geography == country_name)
+            if(c == country_name){
+                console.log('pushing ' + element.name)
                 formatted_array.push(element);
+            }
+                
         });
+
+        
+        formatted_array.forEach(element => {
+            
+            if(element.geography == 'United States of America')
+                element.geography = 'USA'
+        });
+
+        console.log(formatted_array)
 
         //GET ALL PEOPLT WHO WAS BORM BEFORE CURRENT YEAR
 
@@ -120,10 +143,10 @@ function show_personality(year,country_name){
                 .append("image")
                     .attr("xlink:href",function(d){
 
-                        var geography = d.geography;
-                        if(geography == country_name){
+                        
+                   
                             return d.picture;
-                        }
+                       
                         
                     })
                     .attr("width","1")
@@ -201,10 +224,10 @@ function show_personality(year,country_name){
                 .attr("width",function(d){
 
                     var geography = d.geography;
-                    if(geography == country_name){
+                    // if(geography == country_name){
                         var age = (year - parseInt(d.born))*7;
                         return age; //MULTIPLYING WITH 7 SO THAT THE WIDTH TAKES UP SOME SPACE IN SVG
-                    }
+                    // }
                 })
                 .attr("height",age_thickness)
                 .attr("class","person_age")
@@ -249,9 +272,9 @@ function show_personality(year,country_name){
                     var text_x = rect_x + age + 10 ;
 
                     var geography = d.geography;
-                    if(geography == country_name){
+                    // if(geography == country_name){
                         return text_x;
-                    }
+                    // }
                     
                 })
                 .attr("y",function(d,i){
@@ -261,17 +284,17 @@ function show_personality(year,country_name){
                     var text_y = rect_y +  age_thickness/2 ;
 
                     var geography = d.geography;
-                    if(geography == country_name){
+                    // if(geography == country_name){
                         return text_y + 5; //ADDING 5 PIXELS TO POSITION THE TEXT CORRECTLY
-                    }
+                    // }
                 })
                 .text(function(d){
                     var geography = d.geography;
-                    if(geography == country_name){
+                    // if(geography == country_name){
                         return (year - parseInt(d.born)) 
-                    }
-                    else    
-                        return '';
+                    // }
+                    // else    
+                        // return '';
 
                 })
                 .attr("class","person_age_number")
