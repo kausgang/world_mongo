@@ -97,6 +97,11 @@ function display_year(year){
 
 function next_year(){
 
+    //CLEAR THE CONTENT OF EVENTS AND PERSONALITY
+    $('#event_country').html('');
+    $('#event').html('');
+    $('#personality').html('');
+
     //get the year from input box
     var year = parseInt($('#year').val())+1;
 
@@ -112,6 +117,11 @@ function next_year(){
 
 function previous_year(){
 
+    //CLEAR THE CONTENT OF EVENTS AND PERSONALITY
+    $('#event_country').html('');
+    $('#event').html('');
+    $('#personality').html('');
+    
     //get the year from input box
     var year = parseInt($('#year').val())-1;
 
