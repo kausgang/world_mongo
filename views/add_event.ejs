@@ -1,0 +1,72 @@
+<!-- copied from https://www.sanwebe.com/2014/08/css-html-forms-designs       Form Style 6 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel='stylesheet' href='/stylesheets/add_event.css' />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+
+    <!-- ADD COUNTRY NAMES DYNAMICALLY
+    https://css-tricks.com/dynamic-dropdowns/
+    SOURCE https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json -->
+
+    <!-- LOAD JSON DATA QUICKLY
+    https://stackoverflow.com/questions/7346563/loading-local-json-file -->
+    <script src="countries.js"></script>
+    <!-- I HAD TO CHANGE NAMES OF UNITED STATES OF AMERICA AND UNITED KINGDOM TO USA AND ENGLAND FOR MY PROJECT NEED -->
+
+    <script>
+        $(document).ready(function () {
+            
+            var country = $('#country');
+
+            // THIS DATA VARIABLE IS COMING FROM COUNTRIES.JS FILE
+            DATA.forEach(element => {
+                
+                // console.log(element.name);
+                country.append('<option country="'+ element.name + '">' + element.name + '</option>')
+            });
+
+
+            // CHECK IF YEAR IS NOT A FRACTION
+            // YEAR MORE THAN 2000 CAN BE ENTERED
+
+
+        })
+     
+    
+    </script>
+   
+</head>
+<body>
+    
+
+        <div class="form-style-6">
+                <h1>Enter Year & Country</h1>
+                <!-- NOT TAKING TO ANY ACTION PAGE HERE, RATHER processing data with javascript -->
+                
+                <form action='/update_year'  id="form_data"> 
+                    <input type="number" min="1"  name="year" id="year" placeholder="Year" />
+                    <!-- <input type="text" name="country" id="country" placeholder="Country" /> -->
+                    <select name="country" id="country">
+                        <option value="" selected data-default>Select Country</option>
+                    </select>
+                    
+                    
+                    <textarea name="event" placeholder="Enter event description"></textarea>
+                    <!-- <input type="submit" value="Send"  /> -->
+                    <input type="submit" />
+                </form>
+
+                
+
+        </div>
+</body>
+</html>

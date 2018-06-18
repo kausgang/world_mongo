@@ -3,6 +3,11 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- FOR GOOGLE MATERIAL ICON FOR THE WEB -->
+    <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
 
     <!-- JQUERY SCRIPT -->
     <!-- <script src="/javascripts/jquery.min.js"></script> -->
@@ -42,24 +47,36 @@
     <div id='year_range'>
         <div class="slidecontainer" style="float:left;">
           <!-- CHANGE HERE the min and max range -->
-            <input type="range" min="1" max="2000" value="1900" class="slider" id="myRange">
+            <input type="range" min="1" max="2050" value="1900" class="slider" id="myRange">
           </div>
          <div class="select_year" style="float:left;">
            <!-- CHANGE HERE the min and max range -->
             <input type="number" min="1" max="2000" id="year"> 
          </div>
          <div style="float:left;">
-            <!-- <input type="button" value="GO" id="submit" onclick="on_year()"> -->
             <input type="image" src="images/button.jpg" width="22" height="22" alt="Search Year" id="submit" onclick="on_year()">
          </div>
       </div>
     <!-- HEADER YEAR SECTION ENDS -->
 
+
      <!-- INSERT PAGE BREAKS TO POSITION THE CANVAS PROPERLY -->   
      <br /><br />
-     <!-- INSERT NEXT PREVIOUS BUTTON -->
-     <a href="#" class="previous round" onclick="previous_year()">&#8249;</a>
-     <a href="#" class="next round" onclick="next_year()">&#8250;</a>
+
+     <div id="middle_tier">
+       
+          <!-- INSERT NEXT PREVIOUS BUTTON -->
+          <a href="#" class="previous round" onclick="previous_year()">&#8249;</a>
+          <a href="#" class="next round" onclick="next_year()">&#8250;</a>
+          <!-- PUT A LINK IN A ICON (ICON COMING FROM GOOGLE) -->
+          <!-- https://stackoverflow.com/questions/18566608/how-do-i-add-an-a-link-to-an-icon-in-bootstrap -->
+          <a href="/add_person" id="add_person"><i class="material-icons">person_add</i></a>
+          <a href="/add_event" id="add_event"><i class="material-icons">calendar_today</i></a>
+          <!-- <input type="image" src="images/add_person.jpeg" width="22" height="22"  id="add_person" onclick="add_person()"> -->
+       
+      
+     </div>
+     
 
     <div id="container">
       <div >
@@ -78,7 +95,7 @@
     <div>
 
       <svg id="personality"></svg>
-      <!-- <svg id="personality" width="860" height="600"><rect x="30" y="661" height="10" width="39" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect><rect x="30" y="620" height="10" width="80" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect><rect x="30" y="663" height="10" width="37" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect></svg> -->
+      
       
     </div>
           

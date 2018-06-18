@@ -11,7 +11,7 @@ function reload_map_d3(csv_filename,content,year){
 
 
     var width = 860,
-    height = 600,
+    height = 500,
     rotate = 0,        // so that [-60, 0] becomes initial center of projection
     maxlat = 83;        // clip northern and southern poles (infinite in mercator)
     
