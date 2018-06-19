@@ -18,8 +18,10 @@ router.get('/', function(req, res, next) {
   var wikipedia_url = req.query.wikipedia_url;
   var not_a_person = req.query.not_a_person;
 
+ 
+
   update_person(name,born,died,country,picture,wikipedia_url,not_a_person,res);
-  // res.send("hi")
+ 
 });
 
 function update_person(name,born,died,country,picture,wikipedia_url,not_a_person,res){

@@ -83,7 +83,10 @@ function display_year(year){
         }          
         else{
             
-             alert(' data not found for the year '+year);
+            //  alert('Country History '+year);
+             reload_map_d3(country_filename,content,year);
+             display_year(year);
+            
         }
             
 

@@ -26,12 +26,14 @@
         $(document).ready(function () {
             
             var country = $('#country');
+            
 
             // THIS DATA VARIABLE IS COMING FROM COUNTRIES.JS FILE
             DATA.forEach(element => {
                 
                 console.log(element.name);
                 country.append('<option country="'+ element.name + '">' + element.name + '</option>')
+                
             });
 
 
@@ -60,6 +62,8 @@
                     <select name="country" id="country">
                         <option value="" selected data-default>Select Country</option>
                     </select>
+                
+                    
                     <input type="url"  name="picture" placeholder="Picture URL" />
                     <input type="url"  name="wikipedia_url" placeholder="Wikipedia URL" />
                     <input type="checkbox" name="not_a_person" value="true">Not-A-Person<br>
