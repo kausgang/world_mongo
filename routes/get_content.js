@@ -67,6 +67,12 @@ function get_content(year,host,res){
     }
     else{
       
+      // CREATE A DUMMY FILE AND SEND IT
+      var dummy_data = {};
+      dummy_data.year = year;
+      console.log(dummy_data);
+      fs.writeFileSync(filename,JSON.stringify(dummy_data,null,2))
+      
       db_found = false;
       var obj = {
         // content: data,
