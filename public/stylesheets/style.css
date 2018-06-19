@@ -153,8 +153,24 @@ a:hover {
   fill: steelblue;
 }
 
+.death_year {
+  fill: grey
+}
+
 .person_age:hover {
   fill: brown;
+}
+
+/* https://codepen.io/dslanger/pen/KqdvMO */
+.person_circle{
+  stroke: gray;
+  stroke-width: 1;
+ 
+}
+
+.person_circle:hover{
+  stroke: red;
+  stroke-width: 3;
 }
 
 
