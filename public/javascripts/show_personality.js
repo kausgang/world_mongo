@@ -13,21 +13,10 @@ function show_personality(year,country_name){
     svg.selectAll("*").remove();
 
 
-
-
-    
-
-
-
-
-
     
     d3.csv('/PERSONALITY/personality.csv',function(d){
 
 
-
-
-  
 
 
         // FORMAT THE INPUT TO SELECT ONLY THE LIVING PERSONALITIES 
@@ -50,20 +39,19 @@ function show_personality(year,country_name){
             
                 // if(element.geography == country_name)
             if(c == country_name){
-                console.log('pushing ' + element.name)
+                // console.log('pushing ' + element.name)
                 formatted_array.push(element);
             }
                 
         });
 
         
-        formatted_array.forEach(element => {
-            
-            if(element.geography == 'United States of America')
-                element.geography = 'USA'
-        });
+       
 
-        console.log(formatted_array)
+        // console.log(formatted_array)
+
+
+       
 
         //GET ALL PEOPLT WHO WAS BORM BEFORE CURRENT YEAR
 
@@ -111,10 +99,12 @@ function show_personality(year,country_name){
             return parseInt(a.born) - parseInt(b.born)
         })
  
-        console.log(formatted_array2)
+        // console.log(formatted_array2.length)
 
-
-        
+        // SET SVG HEIGHT ACCORDING TO NUMBER OF DATA
+        var number_of_person = formatted_array2.length;
+        svg.attr("height",(number_of_person-1)*80 + 130) // as each circle is 80px wide and 1st circle center is at (50,2*40)
+                
        
 
 
@@ -143,8 +133,9 @@ function show_personality(year,country_name){
                 .append("image")
                     .attr("xlink:href",function(d){
 
+                            if(d.picture == '')
+                                return "/images/no_image.jpeg"
                         
-                   
                             return d.picture;
                        
                         
@@ -230,7 +221,14 @@ function show_personality(year,country_name){
                     // }
                 })
                 .attr("height",age_thickness)
-                .attr("class","person_age")
+                // .attr("class","person_age")
+                .attr("class",function(d){
+                    
+                    var death_year = parseInt(d.died);
+                    if(year == death_year)
+                            return "death_year";
+                    return "person_age";
+                })
                 .on('mouseover', function(){
 
                     tooltip.style("display",null)
@@ -243,13 +241,15 @@ function show_personality(year,country_name){
 
                     var name = d.name;
                     var age = (year - parseInt(d.born));
+                    var death_year = parseInt(d.died);
                     
                     var xpos = d3.mouse(this)[0] -15;
                     var ypos = d3.mouse(this)[1] -55;
                     tooltip.attr("transform","translate("+xpos+","+ypos+")");
                     tooltip.select("text").text(function(d){
 
-                        
+                        if(year == death_year)
+                            return name + " died in " + year;
                         
                         return name + " was " + age + " years old in " + year;
                     })
@@ -257,7 +257,53 @@ function show_personality(year,country_name){
                 })
                 
 
-                
+        // IF NON PERSON ENTITY THEN ADD A CIRCLE NEXT TO THE BAR
+        svg.selectAll('g')
+            .data(formatted_array2)
+            .enter()
+            .append("circle")
+                .attr("cx",function(d){
+                    // console.log(d.non_person);
+                    if(d.non_person){
+                        // DRAW A CIRCLE JUST AT THE BEGINNING OF THE BAR
+                        var rect_x = cx+circle_radius+10;
+                        return rect_x;
+                    }        
+                })
+                .attr("cy",function(d,i){
+                    // console.log(d.non_person);
+                    if(d.non_person){
+                        // DRAW A CIRCLE JUST AT THE BEGINNING OF THE BAR
+                        var cy = 2*circle_radius*i + 2*circle_radius;
+                        var rect_y = cy - age_thickness/2;
+                        return rect_y + age_thickness/2;
+                    }        
+                })
+                .attr("r",function(d){
+                    if(d.non_person)
+                        return 10;
+                })
+                .attr("fill","000")
+                .attr("class","non_person")
+                .attr("name",function(d){
+                    return d.name;
+                })
+                .on('mouseover', function(){
+
+                    tooltip.style("display",null)
+                })
+                .on('mouseout', function(){
+
+                    tooltip.style("display","none")
+                })
+                .on('mousemove', function(d){
+
+                                    
+                    var xpos = d3.mouse(this)[0] -15;
+                    var ypos = d3.mouse(this)[1] -55;
+                    tooltip.attr("transform","translate("+xpos+","+ypos+")");
+                    tooltip.select("text").text("Not-A-Person")
+                })
 
 
         
@@ -300,6 +346,7 @@ function show_personality(year,country_name){
                 .attr("class","person_age_number")
 
 
+                
 
                 //REMEMBER TO PLACE THE TOOLTIP VARIABLE IN THE END, 
                 // IF YOU PLACE IT RIGHT AFTER THE CIRCLE (WHERE IS IT USED FIRST), THE AGE BAR WILL NOT BE SHOWN

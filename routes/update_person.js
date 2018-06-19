@@ -16,12 +16,13 @@ router.get('/', function(req, res, next) {
   var country = req.query.country;
   var picture = req.query.picture;
   var wikipedia_url = req.query.wikipedia_url;
+  var not_a_person = req.query.not_a_person;
 
-  update_person(name,born,died,country,picture,wikipedia_url,res);
+  update_person(name,born,died,country,picture,wikipedia_url,not_a_person,res);
   // res.send("hi")
 });
 
-function update_person(name,born,died,country,picture,wikipedia_url,res){
+function update_person(name,born,died,country,picture,wikipedia_url,not_a_person,res){
 
   var filename = path.join(__dirname,'../public/PERSONALITY/personality.csv');
   
@@ -56,7 +57,9 @@ function update_person(name,born,died,country,picture,wikipedia_url,res){
 
     }); */
 
-    var new_person = name+','+born+','+died+','+country+','+picture+','+wikipedia_url;
+    if(typeof not_a_person == 'undefined')
+      not_a_person = '';
+    var new_person = name+','+born+','+died+','+country+','+picture+','+wikipedia_url+','+not_a_person;
     fs.appendFileSync(filename,new_person+'\n');
 
     var param = {

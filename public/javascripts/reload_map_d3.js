@@ -59,9 +59,8 @@ var svg = d3.select('#globe')
 
 queue()
     .defer(d3.json, "https://raw.githubusercontent.com/kausgang/interactive_world_map/master/ne_110m_admin_0_countries.json")
-    // .defer(d3.tsv, csv_filename)
     .defer(d3.csv, csv_filename)
-    .defer(d3.csv, 'http://localhost:3000/PERSONALITY/personality.csv')
+    .defer(d3.csv, '/PERSONALITY/personality.csv')
     .await(ready);
 
 
