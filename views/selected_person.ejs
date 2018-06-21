@@ -1,7 +1,11 @@
+<!-- THIS IS ANOTHER COPY OF INDEX.JS ONLY A FEW MODIFICATION -->
+<!-- SEE THIS ON HOW TO USE EJS VARIABLE IN JAVASCRIPT -->
+<!-- https://stackoverflow.com/questions/16098397/pass-variables-to-javascript-in-expressjs/16098699 -->
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <!-- FOR GOOGLE MATERIAL ICON FOR THE WEB -->
     <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
@@ -35,11 +39,76 @@
     <script src="javascripts/main.js"></script>
     
    
+
    
+
 
 
   </head>
   <body >
+
+
+
+     <!-- RESTRICTIVE JS TO LIMIT THE YEAR RANGE -->
+   <script>
+   
+   $(document).ready(function (){
+
+      // $('.slider').attr("min","<%= min %>");
+
+      // BRING BACK THE SLIDER AT CERTAIN VALUE
+      // https://github.com/leongersen/noUiSlider/issues/348
+      var slider = $('.slider');
+      var year = $('#year');
+
+      slider.val("<%= min %>");
+      year.val("<%= min %>");
+
+      // LIMIT THE YEAR THAT CAN BE SELECTED FROM NUMBER INPUT BOX
+      year.attr("min","<%= min %>");
+      year.attr("max","<%= max %>");
+
+      slider.on("slide change", function() {
+      
+          slider.val(Math.max( "<%= min %>", slider.val())); //DON'T ALLOW TO GO LESS THAN MIN
+          slider.val(Math.min( "<%= max %>", slider.val())); //DON'T ALLOW TO GO MORE THAN MAX
+          year.val(Math.max( "<%= min %>", slider.val()));
+          year.val(Math.min( "<%= max %>", slider.val()));
+
+      });
+      
+      
+      // AFTER RESTRICTING EVERYTHING SHOW THAT YEAR
+      display_year(year.val());
+      
+      show_personality(year.val(),"<%= country %>");
+      $('#event_country').html("Footprint of <%= name %> in "+year.val())
+      
+
+    
+      
+
+   });
+    
+   function previous_year1(){
+
+      var year = $('#year').val();
+      if(year <= parseInt("<%= min %>"))
+        alert("Cannot go beyond "+year);
+      else  previous_year();
+
+    }
+
+      function next_year1(){
+
+        var year = $('#year').val();
+        if(year >= parseInt("<%= max %>"))
+          alert("Cannot go beyond "+year);
+        else  next_year();
+
+    }
+ 
+ </script>
 
  
 
@@ -47,11 +116,11 @@
     <div id='year_range'>
         <div class="slidecontainer" style="float:left;">
           <!-- CHANGE HERE the min and max range -->
-            <input type="range" min="1" max="2050" value="1900" class="slider" id="myRange">
+            <input type="range" min="1" max="2050"  class="slider" id="myRange" >
           </div>
          <div class="select_year" style="float:left;">
            <!-- CHANGE HERE the min and max range -->
-            <input type="number" min="1" max="2000" id="year"> 
+            <input type="number" min="1" max="2000" id="year" class="year"> 
          </div>
          <div style="float:left;">
             <input type="image" src="images/button.jpg" width="22" height="22" alt="Search Year" id="submit" onclick="on_year()">
@@ -66,13 +135,15 @@
      <div id="middle_tier">
        
           <!-- INSERT NEXT PREVIOUS BUTTON -->
-          <a href="#" class="previous round" onclick="previous_year()">&#8249;</a>
-          <a href="#" class="next round" onclick="next_year()">&#8250;</a>
+          <a href="#" class="previous round" onclick="previous_year1()">&#8249;</a>
+          <a href="#" class="next round" onclick="next_year1()">&#8250;</a>
           <!-- PUT A LINK IN A ICON (ICON COMING FROM GOOGLE) -->
           <!-- https://stackoverflow.com/questions/18566608/how-do-i-add-an-a-link-to-an-icon-in-bootstrap -->
-          <a href="/add_person" id="add_person"><i class="material-icons">person_add</i></a>
-          <a href="/add_event" id="add_event"><i class="material-icons">calendar_today</i></a>
-          <a href="/search_person" id="search_person"><i class="material-icons">search</i></a>
+          <!-- <a href="/add_person" id="add_person"><i class="material-icons">person_add</i></a> -->
+          <!-- <a href="/add_event" id="add_event"><i class="material-icons">calendar_today</i></a> -->
+          <!-- <a href="/search_person" id="search_person"><i class="material-icons">search</i></a> -->
+          <!-- PUT A BUTTON TO NAVIGATE TO THE HOME PAGE -->
+          <a href="/" id="search_person"><i class="material-icons">home</i></a>
           
        
       
@@ -90,7 +161,15 @@
       
         
         <h1 id="event_country"></h1>
-        <ul id="event"></ul>
+        <ul id="event">
+
+          <% for(var i=0; i<countries.length; i++) { %>
+            <li>
+                <%= countries[i] %>
+            </li>
+        <% } %>
+
+        </ul>
 
       </div>       
     <div>
