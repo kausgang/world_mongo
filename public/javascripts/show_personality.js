@@ -212,6 +212,8 @@ function show_personality(year,country_name){
                     var rect_y = cy - age_thickness/2;
                     return rect_y;
                 })
+                .attr("rx",5)
+                .attr("ry",5)
                 .attr("width",function(d){
 
                     var geography = d.geography;

@@ -15,7 +15,8 @@ var update_year = require('./routes/update_year');
 var add_person = require('./routes/add_person');
 var update_person = require('./routes/update_person');
 var home = require('./routes/home');
-// var person_added = require('./routes/person_added');
+var search_person = require('./routes/search_person');
+var selected_person = require('./routes/selected_person');
 
 
 var app = express();
@@ -47,8 +48,9 @@ app.use('/home', home); //used to redirecto to home page
 
 app.use('/add_person',add_person);
 app.use('/update_person',update_person);
-// app.use('/person_added',person_added);
 
+app.use('/search_person',search_person);
+app.use('/selected_person',selected_person);
 
 // app.get('/evaluate',function(req,res){
 
