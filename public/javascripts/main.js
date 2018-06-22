@@ -2,7 +2,10 @@ var country = [];
 
 $(document).ready(function () {
 
-   
+//    DRAW SCALE
+    draw_scale();
+
+
     var slider = document.getElementById("myRange");
     var output = document.getElementById("year");
     output.value = slider.value;
@@ -32,7 +35,7 @@ $(document).ready(function () {
             
             //get the year and
             var year = $('#year').val();
-            //move the cursor
+            //move the slider
             slider.value = year;
             //display the year
             display_year(year);
@@ -53,6 +56,9 @@ function on_year(){
      $('#event').html('');
      $('#personality').html('');
     var year = $('#year').val();
+    //move the slider
+    $('#myRange').val(year)
+
     display_year(year);
 }
 
@@ -138,9 +144,74 @@ function previous_year(){
 }
 
 
-// function add_event(){
 
-//     // $.get('/add_event')
-// }
+function draw_scale(){
 
-// function add_person(){}
+ 
+    var width = $('#myRange').width();
+    var svg = d3.select('#scale')
+                .attr("width",width+10)
+                .attr("height",16)
+    var year_range = 3050;
+    var each_year = width/year_range;
+    scale_label(svg,each_year);
+
+}
+
+
+function scale_label(svg,each_year){
+
+    var tick1_y1=16,tick1_y2=9, text1_y=8;
+
+    // LINE
+    svg.append("line")
+        .attr("x1",0)
+        .attr("y1",16)
+        .attr("x2",each_year*3050)
+        .attr("y2",16)
+        .attr("stroke","#000")
+        .attr("stroke-width","0.5")
+
+ 
+    // MARK EVERY 500 YEARS
+    
+for(var i=0;i<=7;i++){
+
+    // DRAW 1000bc 500bc 0 500 1000 1500 2000
+    svg.append("line")
+        .attr("x1",(i*500)*each_year)
+        .attr("y1",tick1_y1)
+        .attr("x2",(i*500)*each_year)
+        .attr("y2",tick1_y2)
+        .attr("stroke","#000")
+        .attr("stroke-width",function(){
+            if(i==2) //on 0th year , make the tick thick
+                return 3
+            return 1;
+        })
+
+    svg.append("text")
+        .attr("x",(i*500)*each_year)
+        .attr("y",text1_y)
+        .attr("fill","#000")
+        .attr("class","year_scale")
+        .text(function(){
+
+            if(i==0) return "1000 BC";
+            if(i==1) return "500 BC";
+            if(i==2) return "0";
+            if(i==3) return "500";
+            if(i==4) return "1000";
+            if(i==5) return "1500";
+            if(i==6) return "2000";
+
+        })
+            
+
+}
+
+
+    
+      
+
+}

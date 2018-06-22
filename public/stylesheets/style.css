@@ -1,5 +1,6 @@
 body {
-  padding: 35px;
+  /* padding: 35px; */
+  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -135,7 +136,9 @@ a:hover {
 }
 
 .previous {
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
+  /* background-color: #bdbdbdf5; */
+  background-color: #cfcfcf;
   color: black;
 }
 
@@ -199,3 +202,7 @@ a:hover {
   /* padding-right: 10px; */
 }
 
+.year_scale{
+
+  font:bold 11px sans-serif
+}

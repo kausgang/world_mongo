@@ -92,14 +92,15 @@ function show_relative_person(name1,name2,res){
         if(name2_died == 0)
             name2_died = 2000;
 
-        var age_difference = function(name1_born,name2_born){
+          
 
             if(name1_born >= name2_born)
-              return parseInt(name1_born) - parseInt(name2_born);
+                var age_difference = parseInt(name1_born) - parseInt(name2_born);
             else  
-            return parseInt(name2_born) - parseInt(name1_born);
-        }
+                var age_difference = parseInt(name2_born) - parseInt(name1_born);
+        
 
+        console.log(age_difference)
 
         res.render('show_relative_person',
                     {

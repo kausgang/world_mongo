@@ -20,18 +20,9 @@ body{
 #B{  
     /* fill: #8b6060; */
     fill: red;
-    fill-opacity: 0.7;
-    /* outline: none; */
-    /* opacity: 0.7; */
-    -webkit-transition: .2s;
-    /* transition: opacity .2s; */
-  }
-
-#C{  
-    fill: #d3d3d3;
-    fill-opacity: 0.7;
-    /* outline: none; */
-    /* opacity: 0.7; */
+    fill-opacity: 0.5;
+    stroke: black;
+    stroke-width: 1;
     -webkit-transition: .2s;
     /* transition: opacity .2s; */
   }
@@ -39,31 +30,49 @@ body{
 #D{  
     /* fill: #877bca; */
     fill: blue;
-    fill-opacity: 0.7;
-    /* outline: none; */
-    /* opacity: 0.7; */
+    fill-opacity: 0.5;
+    stroke: black;
+    stroke-width: 1;
     -webkit-transition: .2s;
     /* transition: opacity .2s; */
   }
   
-#E{  
-    fill: #d3d3d3;
-    fill-opacity: 0.7;
-    /* outline: none; */
-    /* opacity: 0.7; */
-    -webkit-transition: .2s;
-    /* transition: opacity .2s; */
-  }
 
-  .person_circle{
+ 
+
+  .person_circle0{
     stroke: gray;
     stroke-width: 1;
    
   }
   
-  .person_circle:hover{
+  .person_circle0:hover{
     stroke: red;
     stroke-width: 3;
   }
 
+  .person_circle1{
+    stroke: gray;
+    stroke-width: 1;
+   
+  }
   
+  .person_circle1:hover{
+    stroke: blue;
+    stroke-width: 3;
+  }
+
+  .year_scale{
+
+    font:italic 10px sans-serif
+  }
+
+  .year_name{
+
+    font:bold 13px sans-serif
+  }
+
+  .age_difference{
+
+    font:bold 20px sans-serif
+  }
