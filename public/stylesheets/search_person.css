@@ -3,6 +3,7 @@
   }
   body {
     font: 16px Arial;  
+    padding: 20px;
   }
   .autocomplete {
     /*the container must be positioned relative:*/
@@ -50,3 +51,8 @@
     background-color: DodgerBlue !important; 
     color: #ffffff; 
   }
+
+#input_fields{
+  margin: auto;
+  width: 50%;
+}

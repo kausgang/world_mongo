@@ -77,12 +77,14 @@
 
       });
       
+
+
       
-      // AFTER RESTRICTING EVERYTHING SHOW THAT YEAR
+      // AFTER RESTRICTING EVERYTHING, SHOW THAT YEAR
       display_year(year.val());
       
       show_personality(year.val(),"<%= country %>");
-      $('#event_country').html("Footprint of <%= name %> in "+year.val())
+      $('#event_country').html("Footprint of <%= name %> from <%= min %> to <%= max %>")
       
 
     
@@ -116,11 +118,11 @@
     <div id='year_range'>
         <div class="slidecontainer" style="float:left;">
           <!-- CHANGE HERE the min and max range -->
-            <input type="range" min="1" max="2050"  class="slider" id="myRange" >
+            <input type="range" min="-1000" max="2050"  class="slider" id="myRange" >
           </div>
          <div class="select_year" style="float:left;">
            <!-- CHANGE HERE the min and max range -->
-            <input type="number" min="1" max="2000" id="year" class="year"> 
+            <input type="number" min="-1000" max="2000" id="year" class="year"> 
          </div>
          <div style="float:left;">
             <input type="image" src="images/button.jpg" width="22" height="22" alt="Search Year" id="submit" onclick="on_year()">
