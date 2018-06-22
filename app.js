@@ -17,6 +17,8 @@ var update_person = require('./routes/update_person');
 var home = require('./routes/home');
 var search_person = require('./routes/search_person');
 var selected_person = require('./routes/selected_person');
+var relative_person = require('./routes/relative_person');
+var show_relative_person = require('./routes/show_relative_person');
 
 
 var app = express();
@@ -52,14 +54,9 @@ app.use('/update_person',update_person);
 app.use('/search_person',search_person);
 app.use('/selected_person',selected_person);
 
-// app.get('/evaluate',function(req,res){
 
-//   console.log('heere')
-//   // return res.send(req.query);
-//   // res.send('<script>alert("s")</script>');
-//   // res.redirect('/')
-//   res.render('/evaluate')
-// });
+app.use('/relative_person',relative_person);
+app.use('/show_relative_person',show_relative_person);
 
 
 

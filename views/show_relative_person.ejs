@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel='stylesheet' href='/stylesheets/show_relative_person.css' />
+
+    <!-- GOOGLE ICON -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- USING jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- USING D3 V5 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src='javascripts/relative_person.js'></script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- SETTING DISPLAY=NONE (ALTHOUGH IT IS IMPLICITLY SET FOR CHROME) SO THAT THIS DATA WILL NOT BE SHOWN -->
+    <datalist id="data_from_show_relative_person.js" display="none">
+        
+        <!-- METHOD 1 -->
+        <option id="name1"><%= name1 %></option>
+        <!-- METHOD 2 -->
+        <option value="<%= name2 %>" id="name2"></option>
+
+        <option id="name1_born"><%= name1_born %></option>
+        <option id="name1_died"><%= name1_died %></option>
+        <option id="picture1"><%= picture1 %></option>
+        <option id="wikipedia_url1"><%= wikipedia_url1 %></option>
+
+        <option id="name2_born"><%= name2_born %></option>        
+        <option id="name2_died"><%= name2_died %></option>
+        <option id="picture2"><%= picture2 %></option>
+        <option id="wikipedia_url2"><%= wikipedia_url2 %></option>
+
+        <option id="age_difference"><%= age_difference %></option>
+
+    </datalist>
+    <a href="/" id="home"><i class="material-icons">home</i></a>
+    <svg id="relative_person"></svg>
+
+
+
+</body>
+</html>

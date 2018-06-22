@@ -89,7 +89,7 @@ function about_person(name,res){
                     })
 
 
-    })
+    });
 }
 
 module.exports = router;
