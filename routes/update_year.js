@@ -29,8 +29,8 @@ function update_year(year,country,event,res){
       // CHECK IF COUNTRY EXISTS
       var country_data = data[country];
 
-      console.log('loaded');
-      console.log(data)
+      // console.log('loaded');
+      // console.log(data)
       if(typeof country_data !== 'undefined'){  //the country exists
 
         country_data.push(event);
@@ -40,6 +40,10 @@ function update_year(year,country,event,res){
         
         // AND ADD BACK
         data[country] = country_data;
+
+        // TYPE MESSAGE FOR SYSTEM ADMIN
+        console.log('adding to country database , filename = '+filename+' new event'+data)
+
         
         // WRITE THE UPDATE TO FILE
         fs.writeFileSync(filename,JSON.stringify(data, null, 2))
@@ -59,6 +63,9 @@ function update_year(year,country,event,res){
         event_array.push(event);
         
         data[country] = event_array;
+
+        // TYPE MESSAGE FOR SYSTEM ADMIN
+        console.log('adding to country database - filename = '+ filename + ' new data '+ data)
         
         // write_back_to_file(data,country,new_country);
         fs.writeFileSync(filename,JSON.stringify(data, null, 2))
@@ -80,6 +87,10 @@ function update_year(year,country,event,res){
       
       new_country.year = year;
       new_country[country] = event_array;
+
+      // TYPE MESSAGE FOR SYSTEM ADMIN
+    console.log('adding to country database - new file'+ filename + ' new data '+ new_country)
+
 
        // write_back_to_file(data,country,new_country);
        fs.writeFileSync(filename,JSON.stringify(new_country, null, 2))

@@ -9,7 +9,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   // res.send('respond with a resource');
 
-  console.log(req.query);
+  // console.log(req.query);
   var name = req.query.name;
   var born = req.query.born;
   var died = req.query.died;
@@ -32,7 +32,10 @@ function update_person(name,born,died,country,picture,wikipedia_url,not_a_person
 
     if(typeof not_a_person == 'undefined')
       not_a_person = '';
-    var new_person = '"'+name+'","'+born+'","'+died+'","'+country+'","'+picture+'","'+wikipedia_url+'","'+not_a_person+'"';
+    var new_person = name+','+born+','+died+','+country+',' +picture+ ','  +wikipedia_url  +','+not_a_person;
+
+    // TYPE MESSAGE FOR SYSTEM ADMIN
+    console.log('adding to personality database \n'+ new_person)
 
     fs.appendFileSync(filename,new_person+'\n');
 

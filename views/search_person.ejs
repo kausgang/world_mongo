@@ -10,7 +10,33 @@
 
     <link rel='stylesheet' href='/stylesheets/search_person.css' />
     <script src='person_names_for_search.js'></script>
+    
+    <!-- INCLUDING JQUERY FOR FORM VALIDATION -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 
+    <script>
+    
+      
+          // CHECK IF INPUT NAME EXISTS IN LIST OF NAMES
+          // https://w3schools.com/js/js_validation.asp
+          function validate_name(){
+
+              var input_name = $('#myInput').val()
+              if(!names.includes(input_name)){
+                alert(input_name + " is not found in database");
+                $('#myInput').val('')
+                return false;
+
+              }
+            };
+
+
+
+          
+            
+        
+    </script>
 
             
 
@@ -19,7 +45,7 @@
 
   <hi> Enter Name : <br><br></hi>
     <!--Make sure the form has the autocomplete function switched off:-->
-    <form autocomplete="off" action="/selected_person">
+    <form autocomplete="off" action="/selected_person" onsubmit="return validate_name()">
         <div class="autocomplete" style="width:300px;">
         <input id="myInput" type="text" name="name" placeholder="Name">
         </div>
@@ -144,6 +170,7 @@
             /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
             // autocomplete(document.getElementById("myInput"), countries);
             autocomplete(document.getElementById("myInput"), names);
+
     </script>
 
 

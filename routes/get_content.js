@@ -8,6 +8,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   // res.render('index', { title: 'Express' });
 
+  
+
 // need this to parse csv
   var host = req.headers.host; 
 
@@ -15,7 +17,8 @@ router.get('/', function(req, res, next) {
 // console.log(host);
 
   var year = req.query.year;
-  // console.log(year);
+  //PRINT CONSOLE MESSAGE FOR SYSTEM ADMIN
+  console.log("used selected year "+ year)
 
   get_content(year,host,res);
 });

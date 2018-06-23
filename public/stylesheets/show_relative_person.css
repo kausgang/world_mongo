@@ -64,12 +64,18 @@ body{
 
   .year_scale{
 
-    font:italic 10px sans-serif
+    font:bold 10px sans-serif
   }
 
-  .year_name{
+  .year_name1{
 
-    font:bold 13px sans-serif
+    font:bold 13px sans-serif;
+    fill: red
+  }
+  .year_name2{
+
+    font:bold 13px sans-serif;
+    fill: blue
   }
 
   .age_difference{

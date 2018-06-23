@@ -100,7 +100,7 @@ function show_relative_person(name1,name2,res){
                 var age_difference = parseInt(name2_born) - parseInt(name1_born);
         
 
-        console.log(age_difference)
+        // console.log(age_difference)
 
         res.render('show_relative_person',
                     {

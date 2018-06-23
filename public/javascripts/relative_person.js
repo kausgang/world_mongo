@@ -78,7 +78,7 @@ function show_age_difference(svg,name1,name2,age_difference){
         .attr("x",450)
         .attr("y",600)
         .attr("class","age_difference")
-        .text(name1 + " and " + name2 + " were born - " + age_difference + " years apart.")
+        .text(name1 + " and " + name2 + " were  (" + age_difference + ") years apart.")
 }
 
 
@@ -418,7 +418,7 @@ function draw_timeline(svg,each_year,name1_born,name1_died,name2_born,name2_died
         .attr("x",(each_year*name1_born)-10)
         .attr("y",n1_b_tick_y2+12)
         .attr("fill","#000")
-        .attr("class","year_name")
+        .attr("class","year_name1")
         .text(function(){
             var birth = parseInt(name1_born) - 1000;
             return birth;
@@ -428,7 +428,7 @@ function draw_timeline(svg,each_year,name1_born,name1_died,name2_born,name2_died
         .attr("x",(each_year*name1_died)-10)
         .attr("y",n1_d_tick_y2+12)
         .attr("fill","#000")
-        .attr("class","year_name")
+        .attr("class","year_name1")
         .text(function(){
             var death = parseInt(name1_died) - 1000;
             return death;
@@ -438,7 +438,7 @@ function draw_timeline(svg,each_year,name1_born,name1_died,name2_born,name2_died
         .attr("x",(each_year*name2_born)-10)
         .attr("y",n2_b_tick_y2+12)
         .attr("fill","#000")
-        .attr("class","year_name")
+        .attr("class","year_name2")
         .text(function(){
             var birth = parseInt(name2_born) - 1000;
             return birth;
@@ -448,7 +448,7 @@ function draw_timeline(svg,each_year,name1_born,name1_died,name2_born,name2_died
         .attr("x",(each_year*name2_died)-10)
         .attr("y",n2_d_tick_y2+12)
         .attr("fill","#000")
-        .attr("class","year_name")
+        .attr("class","year_name2")
         .text(function(){
             var death = parseInt(name2_died) - 1000;
             return death;

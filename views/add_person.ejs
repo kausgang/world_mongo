@@ -37,14 +37,50 @@
             });
 
 
-            // CHECK IF YEAR IS NOT A FRACTION
+            
             // YEAR MORE THAN 2000 CAN BE ENTERED
+
+            // REALTIME VALIDATION OF INPUT FIELD
+            // https://formden.com/blog/validate-contact-form-jquery
+            // REAL-TIME VALIDATION OF INPUT NAME FIELD
+            $('#name').on('input',function(){
+
+                var name = $(this).val();
+                if(name.indexOf("'") >= 0){
+                    alert("Avoid single quotes in this field");
+                    $(this).val('')
+                }
+  
+            })
+            // CHECK IF YEAR IS A FRACTION
+            $('#born').on('input',function(){
+
+                var name = $(this).val();
+                if(name.indexOf(".") >= 0){
+                    alert("Birth Year has to be an integer");
+                    $(this).val('')
+                }     
+            })
+            // CHECK IF YEAR IS A FRACTION
+            $('#died').on('input',function(){
+
+                var name = $(this).val();
+                if(name.indexOf(".") >= 0){
+                    alert("Death Year has to be an integer");
+                    $(this).val('')
+                }     
+                })
+
 
 
         })
      
     
     </script>
+
+
+   
+
    
 </head>
 <body>
@@ -56,9 +92,9 @@
                 
                 <form action='/update_person'  id="form_data"> 
                     <!-- I HAD TO USE NAME TAG HERE AND NOT ID TAG SO AS TO MAKE IT RECOGNIZABLE IN /UPDATE_PERSON -->
-                    <input type="text"  name="name"  placeholder="Name" /> 
-                    <input type="number"  name="born" placeholder="Born" />
-                    <input type="number"  name="died" placeholder="Died" />
+                    <input type="text" id="name" name="name"  placeholder="Name" /> 
+                    <input type="number"  id="born" name="born" placeholder="Born" />
+                    <input type="number"  id="died" name="died" placeholder="Died" />
                     <select name="country" id="country">
                         <option value="" selected data-default>Select Country</option>
                     </select>

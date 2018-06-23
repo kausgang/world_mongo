@@ -12,6 +12,45 @@
     <link rel='stylesheet' href='/stylesheets/search_person.css' />
     <script src='person_names_for_search.js'></script>
 
+    <!-- INCLUDING JQUERY FOR FORM VALIDATION -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+
+    <script>
+    
+      
+      // CHECK IF INPUT NAME EXISTS IN LIST OF NAMES
+      // https://w3schools.com/js/js_validation.asp
+      function validate_name(){
+
+          var input_name = $('#myInput1').val()
+          if(!names.includes(input_name)){
+            alert(input_name + " is not found in database");
+            $('#myInput1').val('')
+            return false;
+
+          }
+
+           var input_name = $('#myInput2').val()
+          if(!names.includes(input_name)){
+            alert(input_name + " is not found in database");
+            $('#myInput2').val('')
+            return false;
+
+          }
+
+
+        }
+
+
+
+      
+        
+    
+</script>
+
+        
+
 
             
 
@@ -20,7 +59,7 @@
 
   
     <!--Make sure the form has the autocomplete function switched off:-->
-    <form autocomplete="off" action="/show_relative_person" id="input_fields">
+    <form autocomplete="off" action="/show_relative_person" id="input_fields" onsubmit="return validate_name()">
         <div class="autocomplete" style="width:300px;" id="name1">
             <hi> Enter Name1 : <br><br></hi>
             <input id="myInput1" type="text" name="name1" placeholder="Name">
