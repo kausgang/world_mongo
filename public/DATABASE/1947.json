@@ -1,67 +1,43 @@
 {
-  "year": "1947",
-  "USA": [
-    "The Truman Doctrine was declared, establishing \"the policy of the United States to support free peoples who are resisting attempted subjugation by armed minorities or by outside pressures.\"",
-    "President Truman signed executive order 9835; establishing the Federal Employee Loyalty Program to search out the \"infiltration of disloyal persons\" in the U.S. Government.",
-    "Jackie Robinson of the Brooklyn Dodgers broke the color line in Major League Baseball.",
-    "The Marshall Plan was announced by U.S. Secretary of State George Marshall.",
-    "The Taft Hartley Act was enacted, with the House and Senate overriding President Truman's veto of the bill.",
-    "The <i>Roswell UFO incident</i> occurred near Roswell, New Mexico.",
-    "The Presidential Succession Act was signed into law.",
-    "The National Security Act of 1947 was signed into law, establishing the Central Intelligence Agency.",
-    "The General Agreement on Tariffs and Trade was signed in Geneva."
+  "year": " 1947",
+  "Albania": [
+    "<i>Corfu Channel Incident</i>: United Nations Security Council Resolution 22 recommended that the International Court of Justice settle the dispute between the UK and Albania regarding the sinking of two British ships in the Straits of Corfu.",
+    "The Economic Planning Commission first drew up an economic plan with production targets for mining, manufacturing and agricultural enterprises.",
+    "<i>Greek Civil War</i>: A United Nations commission concluded that Albania, together with Bulgaria and Yugoslavia, supported Communist guerrillas.",
+    "Yugoslavian leaders launched a verbal offensive against anti-Yugoslavian Albanian Communists, including Hoxha, empowering the pro-Yugoslavian faction.",
+    "Albania refused to participate in the Marshall Plan of the United States."
   ],
-  "Taiwan": [
-    "Taibei's rice market closes due to a riot",
-    "<i>February 28 Incident</i>: Six officers attempt to arrest a woman selling cigarettes illegally in Taibei and as a result mass riots break out all over the island",
-    "<i>February 28 Incident</i>: Reinforcements from the mainland arrive in Jilong",
-    "<i>February 28 Incident</i>: The Taiwanese rebels are defeated",
-    "Chen Yi is replaced by Wei Daoming"
+  "Argentina": [
+    "Women&apos;s suffrage is approved"
   ],
-  "Syria": [
-    "The first Ba'ath Party congress was held in Damascus."
+  "Bangladesh": [
+    "Partition of British India, Pakistan and India become two independent states."
   ],
-  "Sweden": [
-    "The furniture company IKEA is founded by Ingvar Kamprad."
+  "Belgium": [
+    "Victor Horta dies."
   ],
-  "Slovenia": [
-    "21 countries sign the Paris peace conference with Italy.",
-    "Free Territory of Trieste (STO &#x2013; <i>Svobodno tr&#x17E;a&#x161;ko ozemlje</i>) is established in Ljubljana."
+  "Bhutan": [
+    "The British Empire leaves India, and direct political by the British ends. Bhutan remains relatively isolated from international affairs."
   ],
-  "Poland": [
-    "Legislative election rigged, 100,000 ORMO men deployed to intimidate voters",
-    "Adoption of Small Constitution of 1947",
-    "Operation Vistula begins",
-    "Auschwitz trial begins in Krak&#xF3;w"
+  "Brazil": [
+    "Parliamentary elections are held, for 19 vacant seats in the Chamber of Deputies, one additional Senator for each state (except Santa Catarina, which elected two), and for all state Governors and legislatures The Brazilian Communist Party wins nearly 10% of the vote in the state elections, becoming the third party in the state of S&#xE3;o Paulo (ahead of the UDN) and the single largest party in the federal capital, Rio de Janeiro.",
+    "The Brazilian Socialist Party is founded.",
+    "The S&#xE3;o Paulo Museum of Art opens to the public."
   ],
-  "Philippine": [
-    "President Roxas issues an amnesty proclamation to collaborators",
-    "HUKBALAHAP declared illegal",
-    "The Treaty of General Relations between Philippines and United States was signed.",
-    "The Philippine representative to the Far Eastern Commission, Carlos P. Romulo, signs the Japanese Peace Treaty"
+  "Burma": [
+    "Panglong Agreement signed by Shan, Kachin, Chin and Burman leaders to gain independence from the British",
+    "Aung San and most of his cabinet assassinated. U Nu and his AFPFL party prepare to take power from the British by finishing Burma&#x2019;s first constitution",
+    "1947 Constitution guarantees the Federated Shan States (later Shan and Kayah states), Kachin State, and Karen State, the right to secede after a period of ten years after independence"
   ],
-  "Nepal": [
-    "Nepali National Congress established through merger of former All-India Nepali National Congress with Nepalese Society of Banaras and Gorkha Congress of Calcutta"
+  "China": [
+    "<i>February 28 Incident</i>: Nationalist forces violently suppressed an anti-government protest in Taiwan Province.",
+    "The Constitution of the Republic of China came into force, dissolving the Nationalist government and renaming the NRA the Republic of China (ROC) Armed Forces."
   ],
-  "Malta": [
-    "Restoration of Self-Government.",
-    "Malta receives &#xA3;30 million to assist with post-War reconstruction."
+  "France": [
+    "Vincent Auriol began his term as the first president of the Fourth Republic."
   ],
-  "Lebanon": [
-    "The United Nations General Assembly recommended the adoption and implementation of the United Nations Partition Plan for Palestine."
-  ],
-  "Kenya": [
-    "Jomo Kenyatta is new president of Kenya African Union"
-  ],
-  "Japan": [
-    "Constitution of Japan goes into effect."
-  ],
-  "Italy": [
-    "Primo Levi publishes <i>If This Is a Man</i>, based on his experiences in Auschwitz."
-  ],
-  "Indonesia": [
-    "Linggadjati Agreement, first ceasfire.",
-    "Major Dutch military offensive to resolve differences by force."
+  "Germany": [
+    "Planck died."
   ],
   "India": [
     "Indian Independence Act 1947 by British Raj.",
@@ -69,43 +45,78 @@
     "Freedom from British Raj.",
     "Hundreds of thousands die in widespread communal bloodshed after partition. (to 1948)"
   ],
-  "Germany": [
-    "Planck died."
+  "Indinesia": [
+    "Linggadjati Agreement, first ceasfire.",
+    "Major Dutch military offensive to resolve differences by force."
   ],
-  "France": [
-    "Vincent Auriol began his term as the first president of the Fourth Republic."
+  "Italy": [
+    "Primo Levi publishes <i>If This Is a Man</i>, based on his experiences in Auschwitz."
   ],
-  "China": [
-    "<i>February 28 Incident</i>: Nationalist forces violently suppressed an anti-government protest in Taiwan Province.",
-    "The Constitution of the Republic of China came into force, dissolving the Nationalist government and renaming the NRA the Republic of China (ROC) Armed Forces."
+  "Japan": [
+    "Constitution of Japan goes into effect."
   ],
-  "Burma": [
-    "Panglong Agreement signed by Shan, Kachin, Chin and Burman leaders to gain independence from the British",
-    "Aung San and most of his cabinet assassinated. U Nu and his AFPFL party prepare to take power from the British by finishing Burma&#x2019;s first constitution",
-    "1947 Constitution guarantees the Federated Shan States (later Shan and Kayah states), Kachin State, and Karen State, the right to secede after a period of ten years after independence"
+  "Kenya": [
+    "Jomo Kenyatta is new president of Kenya African Union"
   ],
-  "Brazil": [
-    "Parliamentary elections are held, for 19 vacant seats in the Chamber of Deputies, one additional Senator for each state (except Santa Catarina, which elected two), and for all state Governors and legislatures The Brazilian Communist Party wins nearly 10% of the vote in the state elections, becoming the third party in the state of S&#xE3;o Paulo (ahead of the UDN) and the single largest party in the federal capital, Rio de Janeiro.",
-    "The Brazilian Socialist Party is founded.",
-    "The S&#xE3;o Paulo Museum of Art opens to the public."
+  "Lebanon": [
+    "The United Nations General Assembly recommended the adoption and implementation of the United Nations Partition Plan for Palestine."
   ],
-  "Bhutan": [
-    "The British Empire leaves India, and direct political by the British ends. Bhutan remains relatively isolated from international affairs."
+  "Malta": [
+    "Restoration of Self-Government.",
+    "Malta receives &#xA3;30 million to assist with post-War reconstruction."
   ],
-  "Belgium": [
-    "Victor Horta dies."
+  "Nepal": [
+    "Nepali National Congress established through merger of former All-India Nepali National Congress with Nepalese Society of Banaras and Gorkha Congress of Calcutta"
   ],
-  "Bangladesh": [
-    "Partition of British India, Pakistan and India become two independent states."
+  "Philippine": [
+    "President Roxas issues an amnesty proclamation to collaborators",
+    "HUKBALAHAP declared illegal",
+    "The Treaty of General Relations between Philippines and United States was signed.",
+    "The Philippine representative to the Far Eastern Commission, Carlos P. Romulo, signs the Japanese Peace Treaty"
   ],
-  "Argentina": [
-    "Women's suffrage is approved"
+  "Poland": [
+    "Legislative election rigged, 100,000 ORMO men deployed to intimidate voters",
+    "Adoption of Small Constitution of 1947",
+    "Operation Vistula begins",
+    "Auschwitz trial begins in Krak&#xF3;w"
   ],
-  "Albania": [
-    "<i>Corfu Channel Incident</i>: United Nations Security Council Resolution 22 recommended that the International Court of Justice settle the dispute between the UK and Albania regarding the sinking of two British ships in the Straits of Corfu.",
-    "The Economic Planning Commission first drew up an economic plan with production targets for mining, manufacturing and agricultural enterprises.",
-    "<i>Greek Civil War</i>: A United Nations commission concluded that Albania, together with Bulgaria and Yugoslavia, supported Communist guerrillas.",
-    "Yugoslavian leaders launched a verbal offensive against anti-Yugoslavian Albanian Communists, including Hoxha, empowering the pro-Yugoslavian faction.",
-    "Albania refused to participate in the Marshall Plan of the United States."
+  "Russia": [
+    "<i>Polish legislative election, 1947</i>: Rigged elections gave the Communist bloc 80 percent of the vote.",
+    "The Hungarian Communist Party won a plurality of seats in elections to the Hungarian legislature.",
+    "The Cominform was established in order to coordinate Communist parties under Soviet control.",
+    "A speech to the Central Committee of the KS&#x10C; by Chairman Klement Gottwald denounced &quot;reactionary forces&quot; and triggered the purge of non-Communists from the Czechoslovakian security forces.",
+    "King Michael I of Romania was forced to abdicate."
+  ],
+  "Singapore": [
+    "A large number of strikes occur causing stoppages in public transport, public services and the harbour.",
+    "Severe food shortage leads to record-low rice ration, causing malnutrition, disease and outbreak of crime and violence."
+  ],
+  "Slovenia": [
+    "21 countries sign the Paris peace conference with Italy.",
+    "Free Territory of Trieste (STO &#x2013; <i>Svobodno tr&#x17E;a&#x161;ko ozemlje</i>) is established in Ljubljana."
+  ],
+  "Sweden": [
+    "The furniture company IKEA is founded by Ingvar Kamprad."
+  ],
+  "Syria": [
+    "The first Ba&apos;ath Party congress was held in Damascus."
+  ],
+  "Taiwan": [
+    "Taibei&apos;s rice market closes due to a riot",
+    "<i>February 28 Incident</i>: Six officers attempt to arrest a woman selling cigarettes illegally in Taibei and as a result mass riots break out all over the island",
+    "<i>February 28 Incident</i>: Reinforcements from the mainland arrive in Jilong",
+    "<i>February 28 Incident</i>: The Taiwanese rebels are defeated",
+    "Chen Yi is replaced by Wei Daoming"
+  ],
+  "USA": [
+    "The Truman Doctrine was declared, establishing &quot;the policy of the United States to support free peoples who are resisting attempted subjugation by armed minorities or by outside pressures.&quot;",
+    "President Truman signed executive order 9835; establishing the Federal Employee Loyalty Program to search out the &quot;infiltration of disloyal persons&quot; in the U.S. Government.",
+    "Jackie Robinson of the Brooklyn Dodgers broke the color line in Major League Baseball.",
+    "The Marshall Plan was announced by U.S. Secretary of State George Marshall.",
+    "The Taft Hartley Act was enacted, with the House and Senate overriding President Truman&apos;s veto of the bill.",
+    "The <i>Roswell UFO incident</i> occurred near Roswell, New Mexico.",
+    "The Presidential Succession Act was signed into law.",
+    "The National Security Act of 1947 was signed into law, establishing the Central Intelligence Agency.",
+    "The General Agreement on Tariffs and Trade was signed in Geneva."
   ]
 }

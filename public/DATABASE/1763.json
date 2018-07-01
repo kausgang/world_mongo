@@ -1,7 +1,22 @@
 {
   "year": "1763",
-  "Poland": [
-    "Death of August III"
+  "Brazil": [
+    "The capital of Colonial Brazil is transferred from Salvador to Rio de Janeiro, which is located closer to the mining region and provides a harbor to ship the gold to Europe."
+  ],
+  "Burma": [
+    "Lanna rebellion put down"
+  ],
+  "Canada": [
+    "The Seven Years&apos; War is ended by the Treaty of Paris. France cedes New France to Great Britain."
+  ],
+  "Cuba": [
+    "British troops suffer atrocious losses to fever. They cede Cuba to Spain in the Treaty of Paris."
+  ],
+  "France": [
+    "<i>Seven Years&apos; War</i>: France and some allied and enemy nations sign the Treaty of Paris ending the Seven Years&apos; War, resulting in a major blow on French colonial possessions."
+  ],
+  "Germany": [
+    "<i>Third Silesian War</i>: Prussia, Austria and Saxony signed the Treaty of Hubertusburg, ending the war and restoring the three states&apos; prewar borders."
   ],
   "Philippine": [
     "Dabo and Marayac Revolt (1763)",
@@ -10,22 +25,12 @@
     "Death of Diego Silang",
     "Execution of Gabriela Silang, the only Filipina to have led a revolt"
   ],
-  "Germany": [
-    "<i>Third Silesian War</i>: Prussia, Austria and Saxony signed the Treaty of Hubertusburg, ending the war and restoring the three states' prewar borders."
+  "Poland": [
+    "Death of August III"
   ],
-  "France": [
-    "<i>Seven Years' War</i>: France and some allied and enemy nations sign the Treaty of Paris ending the Seven Years' War, resulting in a major blow on French colonial possessions."
-  ],
-  "Cuba": [
-    "British troops suffer atrocious losses to fever. They cede Cuba to Spain in the Treaty of Paris."
-  ],
-  "Canada": [
-    "The Seven Years' War is ended by the Treaty of Paris. France cedes New France to Great Britain."
-  ],
-  "Burma": [
-    "Lanna rebellion put down"
-  ],
-  "Brazil": [
-    "The capital of Colonial Brazil is transferred from Salvador to Rio de Janeiro, which is located closer to the mining region and provides a harbor to ship the gold to Europe."
+  "USA": [
+    "<i>Pontiac&apos;s Rebellion</i>: The frontier rebellion against British army posts began.",
+    "<i>French and Indian War</i>: The Treaty of Paris, under which France ceded much of its North American territory to Great Britain and surrendered Louisiana to Spain, formally ended the war.",
+    "The Royal Proclamation of 1763, establishing royal administration over the colonies won under the Treaty of Paris and demarcating their western boundary."
   ]
 }

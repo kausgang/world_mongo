@@ -1,12 +1,20 @@
 {
   "year": "1791",
-  "Russia": [
-    "<i>Great Sejm</i>: Poland's Constitution of 3 May was ratified in secret. The new constitution abolished the <i>liberum veto</i>, reducing the power of the nobles and limiting Russia's ability to influence Polish internal politics.",
-    "Catherine established the Pale of Settlement, an area in European Russia into which Russian Jews were transported."
+  "Australia": [
+    "The first ship of the Third Fleet arrived at Sydney Cove."
   ],
-  "Poland": [
-    "Free Royal Cities Act",
-    "Adoption of Constitution of 3 May"
+  "Belgium": [
+    "Austrian military intervention restores C&#xE9;sar-Constantin-Fran&#xE7;ois de Hoensbroeck as prince-bishop of Li&#xE8;ge"
+  ],
+  "Canada": [
+    "The Constitutional Act of 1791 divides the Province of Quebec into Upper and Lower Canada (modern-day Ontario and Quebec)."
+  ],
+  "China": [
+    "<i>Dream of the Red Chamber</i> was published."
+  ],
+  "Germany": [
+    "Prussia and the Holy Roman Empire issued the Declaration of Pillnitz, promising to join a coalition to restore Louis XVI of France to the French throne.",
+    "Mozart died."
   ],
   "Haiti": [
     "Vincent Og&#xE9; and Jean-Baptiste Chavannes, proponents of equal rights for free blacks and mulattos and leaders of an armed rebellion, were publicly executed in Cap-Fran&#xE7;ais.",
@@ -17,20 +25,17 @@
     "The Concordat de Damiens was signed, granting political rights to the affranchis.",
     "The First Civil Commission, comprising Roume, Mirbeck, and Saint-L&#xE9;ger, arrived in Cap-Fran&#xE7;ais to restore order."
   ],
-  "Germany": [
-    "Prussia and the Holy Roman Empire issued the Declaration of Pillnitz, promising to join a coalition to restore Louis XVI of France to the French throne.",
-    "Mozart died."
+  "Poland": [
+    "Free Royal Cities Act",
+    "Adoption of Constitution of 3 May"
   ],
-  "China": [
-    "<i>Dream of the Red Chamber</i> was published."
+  "Russia": [
+    "<i>Great Sejm</i>: Poland&apos;s Constitution of 3 May was ratified in secret. The new constitution abolished the <i>liberum veto</i>, reducing the power of the nobles and limiting Russia&apos;s ability to influence Polish internal politics.",
+    "Catherine established the Pale of Settlement, an area in European Russia into which Russian Jews were transported."
   ],
-  "Canada": [
-    "The Constitutional Act of 1791 divides the Province of Quebec into Upper and Lower Canada (modern-day Ontario and Quebec)."
-  ],
-  "Belgium": [
-    "Austrian military intervention restores C&#xE9;sar-Constantin-Fran&#xE7;ois de Hoensbroeck as prince-bishop of Li&#xE8;ge"
-  ],
-  "Australia": [
-    "The first ship of the Third Fleet arrived at Sydney Cove."
+  "USA": [
+    "The United States Bill of Rights was ratified.",
+    "The First Bank of the United States was chartered.",
+    "The independent Vermont Republic was admitted to the Union as Vermont, becoming the fourteenth state."
   ]
 }

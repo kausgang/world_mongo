@@ -1,62 +1,38 @@
 {
-  "year": "1944",
-  "USA": [
-    "<i>Normandy Landings (D-Day)</i>: The Invasion of Normandy, one of the largest amphibious military assaults in history, began in the Allied Powers broader Operation Overlord; leading to the Liberation of Paris.",
-    "The G.I. Bill was signed into law.",
-    "<i>United Nations Monetary and Financial Conference</i>: Delegates from 44 nations met to discuss a new post-WWII monetary policy.",
-    "The <i>Dumbarton Oaks Conference</i> began, starting the first talks between world leaders on the establishment of the United Nations.",
-    "<i>U.S. presidential election, 1944</i>: President Franklin Delano Roosevelt was reelected to a fourth term, defeating New York Governor Thomas E. Dewey.",
-    "The Battle of the Bulge, Germany's final major offensive of World War II, began; being the deadliest military battle for the United States during World War II."
+  "year": " 1944",
+  "Albania": [
+    "The National Liberation Movement, supplied with British weapons, gained control of southern Albania.",
+    "The Communists met to organize an Albanian government and appointed Hoxha chairman of the executive committee and supreme commander of the National Liberation Movement.",
+    "Communist forces enter central and northern Albania.",
+    "The Communists established a provisional government with Enver Hoxha as Prime Minister.",
+    "The Communists entered the capital in the wake of a German withdrawal.",
+    "The Communist provisional government adopted laws allowing state regulation of commercial enterprises and foreign and domestic trade."
   ],
-  "Taiwan": [
-    "Taiwan is bombed by America"
+  "Argentina": [
+    "San Juan earthquake destroys provincial capital, kills 10,000"
   ],
-  "Syria": [
-    "Syria was recognized as an independent republic."
+  "Australia": [
+    "Cowra breakout, mass escape of Japanese prisoners of war occurs in NSW.",
+    "Japanese inflict Sandakan Death March on 2,000 Australian and British prisoners of war &#x2013; only 6 survive. The single worst war crime perpetrated against Australians.",
+    "Australian forces battle Japanese garrisons from Borneo to Bougainville.",
+    "The Pharmaceutical Benefits Scheme is introduced, providing subsidised medicine to all Australians"
   ],
-  "Serbia": [
-    "The Royal Yugoslav government in exile recognizes the partisans as Yugoslavia's legitimate armed forces, ordering the Royal Army to join the newly named Partisan Yugoslav army, following the Tito-&#x160;uba&#x161;i&#x107; agreement on the Adriatic island of Vis. The King calls for Serbs, Croats and Slovenes to unite into a single army under partisan flag. Dra&#x17E;a Mihajlovi&#x107; and many of his chetniks refuse to obey and continue fighting on their own, with neither royal nor Allied support, calling on Serbs to emancipate themselves from Yugoslavia in the form of Greater Serbia."
+  "Barbados": [
+    "Women secure the right to vote."
   ],
-  "Poland": [
-    "Koniuchy massacre by Soviet partisans",
-    "Huta Pieniacka massacre by Ukrainian Grenadier Division of the Waffen-SS",
-    "Glinciszki massacre by Lithuanian Auxiliary Police",
-    "Proclamation of the PKWN Manifesto by Soviet-backed Polish Committee of National Liberation",
-    "Operation Most III begins on the German V-2 rocket",
-    "Wola massacre in the opening phase of the Warsaw Uprising",
-    "Warsaw Uprising begins",
-    "Warsaw Uprising ends"
+  "Belgium": [
+    "Liberation of Brussels and Antwerp.",
+    "Customs Convention between Belgium, the Netherlands and Luxembourg signed.",
+    "German reinvasion: the Battle of the Bulge begins."
   ],
-  "Philippine": [
-    "The puppet government inaugurates the Green Revolution Movement.",
-    "Death of Pres. Quezon; Vice Pres. Sergio Osmena then assumes the Office of the President of the Commonwealth of the Philippines.",
-    "US forces raids Manila",
-    "Tomoyuki Yamashita appointed as Japanese Military Governor (1944&#x2013;1945)",
-    "General MacArthur lands in Palo, Leyte, accompanied by President Sergio Osmena and US troops",
-    "The Commonwealth government of the Philippines is re-established in Tacloban, Leyte",
-    "Pro-Japanese Philippine generals Pio Duran and Benigno Ramos organize the Makapilis"
+  "Brazil": [
+    "The former Royal Military Academy expends into the city of Resende.",
+    "Second World War: The first five thousand Brazilian Expeditionary Force soldiers, the 6th RCT, leave Brazil for Europe aboard the USNS <i>General Mann</i>.",
+    "Brazilian air-land forces go into action in Italy.",
+    "Brazilian pilots begin operations, as individual elements of flights attached to 350th FG squadrons."
   ],
-  "Malta": [
-    "The diocese of Malta is elevated to a Metropolitan See by Pope Pius XII."
-  ],
-  "Latvia": [
-    "<i>Occupation of Latvia by Soviet Union 1944-1945</i>: The Soviet army reentered Riga."
-  ],
-  "Kenya": [
-    "Kenya African Study Union is founded by Harry Thuku"
-  ],
-  "India": [
-    "Subhas Chandra Bose calls Mahatma Gandhi as the Father of the Nation."
-  ],
-  "Iceland": [
-    "Iceland becomes an independent republic, severing the last political ties to Denmark. Sveinn Bj&#xF6;rnsson becomes president."
-  ],
-  "Haiti": [
-    "The Cathedral of Cap-Ha&#xEF;tien is consecrated after 100 years of restoration work",
-    "The Centre d'Art is founded; it exhibits important Haitian art works"
-  ],
-  "France": [
-    "<i>Second World War</i> &#x2013; <i>Liberation of Paris</i>: In what is considered the last battle of the Allied Operation Overlord, Allied forces, and in particular Free French Forces and the French Resistance, liberated Paris from German occupation as a strong symbolic effort to restore French honor, tarnished by the fast defeat. The rest of France was liberated as the Allies advanced towards Germany."
+  "China": [
+    "<i>Battle of Changsha</i>: The Japanese army launched a general offensive against Changsha."
   ],
   "Estonia": [
     "Otto Tief was captured by Soviet forces; J&#xFC;ri Uluots and members of the Tief government escaped to Sweden.",
@@ -72,38 +48,78 @@
     "The Soviets captured Tallinn.",
     "The entire territory of Estonia was captured by the Red Army."
   ],
-  "China": [
-    "<i>Battle of Changsha</i>: The Japanese army launched a general offensive against Changsha."
+  "France": [
+    "<i>Second World War</i> &#x2013; <i>Liberation of Paris</i>: In what is considered the last battle of the Allied Operation Overlord, Allied forces, and in particular Free French Forces and the French Resistance, liberated Paris from German occupation as a strong symbolic effort to restore French honor, tarnished by the fast defeat. The rest of France was liberated as the Allies advanced towards Germany."
   ],
-  "Brazil": [
-    "The former Royal Military Academy expends into the city of Resende.",
-    "Second World War: The first five thousand Brazilian Expeditionary Force soldiers, the 6th RCT, leave Brazil for Europe aboard the USNS <i>General Mann</i>.",
-    "Brazilian air-land forces go into action in Italy.",
-    "Brazilian pilots begin operations, as individual elements of flights attached to 350th FG squadrons."
+  "Haiti": [
+    "The Cathedral of Cap-Ha&#xEF;tien is consecrated after 100 years of restoration work",
+    "The Centre d&apos;Art is founded; it exhibits important Haitian art works"
   ],
-  "Belgium": [
-    "Liberation of Brussels and Antwerp.",
-    "Customs Convention between Belgium, the Netherlands and Luxembourg signed.",
-    "German reinvasion: the Battle of the Bulge begins."
+  "India": [
+    "Subhas Chandra Bose calls Mahatma Gandhi as the Father of the Nation."
   ],
-  "Barbados": [
-    "Women secure the right to vote."
+  "Kenya": [
+    "Kenya African Study Union is founded by Harry Thuku"
   ],
-  "Australia": [
-    "Cowra breakout, mass escape of Japanese prisoners of war occurs in NSW.",
-    "Japanese inflict Sandakan Death March on 2,000 Australian and British prisoners of war &#x2013; only 6 survive. The single worst war crime perpetrated against Australians.",
-    "Australian forces battle Japanese garrisons from Borneo to Bougainville.",
-    "The Pharmaceutical Benefits Scheme is introduced, providing subsidised medicine to all Australians"
+  "Latvia": [
+    "<i>Occupation of Latvia by Soviet Union 1944-1945</i>: The Soviet army reentered Riga."
   ],
-  "Argentina": [
-    "San Juan earthquake destroys provincial capital, kills 10,000"
+  "Malta": [
+    "The diocese of Malta is elevated to a Metropolitan See by Pope Pius XII."
   ],
-  "Albania": [
-    "The National Liberation Movement, supplied with British weapons, gained control of southern Albania.",
-    "The Communists met to organize an Albanian government and appointed Hoxha chairman of the executive committee and supreme commander of the National Liberation Movement.",
-    "Communist forces enter central and northern Albania.",
-    "The Communists established a provisional government with Enver Hoxha as Prime Minister.",
-    "The Communists entered the capital in the wake of a German withdrawal.",
-    "The Communist provisional government adopted laws allowing state regulation of commercial enterprises and foreign and domestic trade."
+  "Philippine": [
+    "The puppet government inaugurates the Green Revolution Movement.",
+    "Death of Pres. Quezon; Vice Pres. Sergio Osmena then assumes the Office of the President of the Commonwealth of the Philippines.",
+    "US forces raids Manila",
+    "Tomoyuki Yamashita appointed as Japanese Military Governor (1944&#x2013;1945)",
+    "General MacArthur lands in Palo, Leyte, accompanied by President Sergio Osmena and US troops",
+    "The Commonwealth government of the Philippines is re-established in Tacloban, Leyte",
+    "Pro-Japanese Philippine generals Pio Duran and Benigno Ramos organize the Makapilis"
+  ],
+  "Poland": [
+    "Koniuchy massacre by Soviet partisans",
+    "Huta Pieniacka massacre by Ukrainian Grenadier Division of the Waffen-SS",
+    "Glinciszki massacre by Lithuanian Auxiliary Police",
+    "Proclamation of the PKWN Manifesto by Soviet-backed Polish Committee of National Liberation",
+    "Operation Most III begins on the German V-2 rocket",
+    "Wola massacre in the opening phase of the Warsaw Uprising",
+    "Warsaw Uprising begins",
+    "Warsaw Uprising ends"
+  ],
+  "Russia": [
+    "The Red Army crossed into Poland.",
+    "<i>Siege of Leningrad</i>: The last German forces were expelled from the city.",
+    "Sergius died.",
+    "The Communist Lublin Government of Poland was established.",
+    "<i>Warsaw Uprising</i>: The Polish Home Army began an attack on German forces in Warsaw.",
+    "<i>Warsaw Uprising</i>: Stalin denied the Allies use of his landing strips to supply aid to the insurgents.",
+    "Michael I of Romania led a coup against the military dictatorship of Ion Antonescu.",
+    "<i>Soviet occupation of Romania</i>: The Red Army captured Bucharest.",
+    "Romania signed an armistice with the Allies, placing itself under the command of an Allied Commission led by Marshal of the Soviet Union Rodion Malinovsky.",
+    "<i>Continuation War</i>: The Moscow Armistice was signed, ending the war at roughly the prewar borders.",
+    "Soviet and Czechoslovak partisan armed forces entered German-occupied Czechoslovakia.",
+    "<i>Warsaw Uprising</i>: The leader of the Uprising signed a surrender agreement.",
+    "The Committee for the Liberation of the Peoples of Russia was established in Prague.",
+    "The Provisional Government of the Republic of Poland (RTRP), which incorporated token non-Communists into the preexisting Lublin Government, was established."
+  ],
+  "Serbia": [
+    "The Royal Yugoslav government in exile recognizes the partisans as Yugoslavia&apos;s legitimate armed forces, ordering the Royal Army to join the newly named Partisan Yugoslav army, following the Tito-&#x160;uba&#x161;i&#x107; agreement on the Adriatic island of Vis. The King calls for Serbs, Croats and Slovenes to unite into a single army under partisan flag. Dra&#x17E;a Mihajlovi&#x107; and many of his chetniks refuse to obey and continue fighting on their own, with neither royal nor Allied support, calling on Serbs to emancipate themselves from Yugoslavia in the form of Greater Serbia."
+  ],
+  "Singapore": [
+    "Lim Bo Seng is captured by the Japanese, and dies after 3 months of torture."
+  ],
+  "Syria": [
+    "Syria was recognized as an independent republic."
+  ],
+  "Taiwan": [
+    "Taiwan is bombed by America"
+  ],
+  "USA": [
+    "<i>Normandy Landings (D-Day)</i>: The Invasion of Normandy, one of the largest amphibious military assaults in history, began in the Allied Powers broader Operation Overlord; leading to the Liberation of Paris.",
+    "The G.I. Bill was signed into law.",
+    "<i>United Nations Monetary and Financial Conference</i>: Delegates from 44 nations met to discuss a new post-WWII monetary policy.",
+    "The <i>Dumbarton Oaks Conference</i> began, starting the first talks between world leaders on the establishment of the United Nations.",
+    "<i>U.S. presidential election, 1944</i>: President Franklin Delano Roosevelt was reelected to a fourth term, defeating New York Governor Thomas E. Dewey.",
+    "The Battle of the Bulge, Germany&apos;s final major offensive of World War II, began; being the deadliest military battle for the United States during World War II."
   ]
 }

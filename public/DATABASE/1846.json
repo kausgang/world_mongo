@@ -1,43 +1,48 @@
 {
   "year": "1846",
-  "USA": [
-    "<i>Mexican&#x2013;American War</i>: The war begins.",
-    "Iowa becomes the 29th state.",
-    "The Wilmot Proviso is introduced."
+  "Belgium": [
+    "Barth&#xE9;l&#xE9;my de Theux de Meylandt replaces Sylvain Van de Weyer as Prime Minister"
   ],
-  "Spain": [
-    "<i>Second Carlist War</i>: The war began."
+  "England": [
+    "The Corn Laws were repealed."
   ],
-  "Slovenia": [
-    "First locomotive of the \"Southern Railway\" comes to Celje.",
-    "Trial run of the first train on the \"Southern Railway\" to Celje is performed.",
-    "The \"Southern Railway\" to Celje is open for public."
+  "Haiti": [
+    "President Pierrot is overthrown; Jean-Baptiste Rich&#xE9; becomes President of Haiti"
   ],
-  "Poland": [
-    "Krak&#xF3;w Uprising begins",
-    "Krak&#xF3;w Uprising ends",
-    "Free City of Krak&#xF3;w incorporated into the Austrian Empire"
+  "Italy": [
+    "Pope Pius IX is elected, and his support of the unification of Italy helps to further popularise the movement."
   ],
-  "Philippine": [
-    "<i>La Esperanza</i> is established by Miguel Sanchez; the country's first daily newspaper lasted three years."
+  "Kenya": [
+    "First Christian mission is founded by Johann Ludwig Krapf"
   ],
   "Nepal": [
     "Nepal falls under sway of hereditary chief ministers known as Ranas, who dominate the monarchy and cut off country from outside world.",
     "Kot Massacre takes place"
   ],
-  "Kenya": [
-    "First Christian mission is founded by Johann Ludwig Krapf"
+  "Philippine": [
+    "<i>La Esperanza</i> is established by Miguel Sanchez; the country&apos;s first daily newspaper lasted three years."
   ],
-  "Italy": [
-    "Pope Pius IX is elected, and his support of the unification of Italy helps to further popularise the movement."
+  "Poland": [
+    "Krak&#xF3;w Uprising begins.",
+    "Krak&#xF3;w Uprising ended.",
+    "Free City of Krak&#xF3;w incorporated into the Austrian Empire."
   ],
-  "Haiti": [
-    "President Pierrot is overthrown; Jean-Baptiste Rich&#xE9; becomes President of Haiti"
+  "Slovenia": [
+    "First locomotive of the &quot;Southern Railway&quot; comes to Celje.",
+    "Trial run of the first train on the &quot;Southern Railway&quot; to Celje is performed.",
+    "The &quot;Southern Railway&quot; to Celje is open for public."
   ],
-  "England": [
-    "The Corn Laws were repealed."
+  "Spain": [
+    "<i>Second Carlist War</i>: The war began."
   ],
-  "Belgium": [
-    "Barth&#xE9;l&#xE9;my de Theux de Meylandt replaces Sylvain Van de Weyer as Prime Minister"
+  "Tajikistan": [
+    "<i>Battle of Aliwal</i>: The battle took place.",
+    "The Treaty of Lahore was signed.",
+    "<i>First Anglo-Sikh War</i>: The war ended with Britain claiming victory."
+  ],
+  "USA": [
+    "<i>Mexican&#x2013;American War</i>: The war begins.",
+    "Iowa becomes the 29th state.",
+    "The Wilmot Proviso is introduced."
   ]
 }
