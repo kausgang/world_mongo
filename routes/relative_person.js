@@ -59,7 +59,12 @@ function relative_person(res){
         updated_names.push('"' + element + '"') ;
       });
       var filename = path.join(__dirname,'../public/person_names_for_search.js');
-      fs.writeFileSync(filename,"var names = ["+updated_names+']');
+      
+      //WRITE THE FILE IN ASYNC MODE TO LOAD THE PAGE QUICKLY
+      // fs.writeFileSync(filename,"var names = ["+updated_names+']');
+      fs.writeFile(filename,"var names = ["+updated_names+']',(err)=>{
+        if(err) throw err;
+      });
 
       res.render('relative_person');
       
