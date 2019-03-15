@@ -1,10 +1,10 @@
 const config={
-        "db_location":"ds213896.mlab.com:13896",
+        "db_location":"ds155634.mlab.com:55634",
         "username":"sadmin",
         "passeword":"Kolkata#1",
-        "database":"timeline_test",
-        "collection":"timeline_data",
-        "db_connect_string":"mongodb://sadmin:Kolkata#1@ds213896.mlab.com:13896/timeline_test"
+        "database":"worlddb",
+        "collection":"timeline",
+        "db_connect_string":"mongodb://sadmin:Kolkata#1@ds155634.mlab.com:55634/worlddb"
     
     }
 module.exports = config;
