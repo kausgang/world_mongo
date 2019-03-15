@@ -4,8 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 // var bodyParser     =         require("body-parser");
+var mongo_client = require('mongodb').MongoClient;
 
 
+var config = require('./config');
+const database_location = config.db_location;
+const db_user = config.username;
+const db_password=config.password;
+const db_database= config.database;
+var db_connect_string=config.db_connect_string;
+
+// console.log(db_connect_string);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -23,6 +32,16 @@ var show_relative_person = require('./routes/show_relative_person');
 
 var app = express();
 
+// Establish connection to database & use the connection in modules as req.app.db
+// mongo_client.connect('mongodb://sadmin:Kolkata#1@ds213896.mlab.com:13896/timeline_test',{useNewUrlParser: true},(err,conn)=>{
+mongo_client.connect(db_connect_string,{useNewUrlParser: true},(err,conn)=>{  
+  if(err) throw err;
+  app.conn=conn;
+
+  app.database=config.database;
+  app.collection=config.collection;
+
+})
 
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());

@@ -42,6 +42,20 @@
         })
      
     
+        //make sure all the forms are filled out
+        window.onload = function () {
+        var form = document.getElementById('theForm');
+        form.button.onclick = function (){
+        for(var i=0; i < form.elements.length; i++){
+            if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
+                alert('There are some required fields!');
+                return false;
+            }
+        }
+    form.submit();
+  }; 
+};
+
     </script>
    
 </head>
@@ -53,14 +67,14 @@
                 <!-- NOT TAKING TO ANY ACTION PAGE HERE, RATHER processing data with javascript -->
                 
                 <form action='/update_year'  id="form_data"> 
-                    <input type="number" min="1"  name="year" id="year" placeholder="Year" />
+                    <input type="number" min="-1000"  name="year" id="year" placeholder="Year" />
                     <!-- <input type="text" name="country" id="country" placeholder="Country" /> -->
-                    <select name="country" id="country">
+                    <select name="country" id="country" required>
                         <option value="" selected data-default>Select Country</option>
                     </select>
                     
                     
-                    <textarea name="event" placeholder="Enter event description"></textarea>
+                    <textarea name="event" placeholder="Enter event description" required></textarea>
                     <!-- <input type="submit" value="Send"  /> -->
                     <input type="submit" />
                 </form>
