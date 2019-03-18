@@ -9,14 +9,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   // res.render('index', { title: 'Express' });
 
-  
-
 // need this to parse csv
   // var host = req.headers.host; 
   var host = req.headers.referer; //sends http://<server>:<port> or https://<server>:<port>
-
-
-// console.log(req.headers.referer);
 
   var year = req.query.year;
   //PRINT CONSOLE MESSAGE FOR SYSTEM ADMIN
@@ -107,8 +102,6 @@ function get_content(year,host,res){
 
 
 
-
-
 // MONGODB BASED OPERATION
 function get_content(year,host,res,conn,database,collection){
 
@@ -131,13 +124,11 @@ function get_content(year,host,res,conn,database,collection){
       }) 
     }
     else{ //YEAR FOUND
-      var db_found = true;
-    
+      var db_found = true;  
       //get the country name and write in a file for d3     
       var country_filename = path.join(__dirname,'../public/country.csv');
       fs.writeFileSync(country_filename,'country\n') //CREATING HEADER FOR THE CSV FILE
       var i =1; 
-  
       Object.keys(data).forEach(function(key){
         var value = data[key];     
         if(i!=1 && i!=2) //THE FIRST VALUE IS "_id" & 2nd is "year" for mongodb
@@ -145,10 +136,8 @@ function get_content(year,host,res,conn,database,collection){
         i++;
       });
     }
-    
     // var csv_filename = 'http://'+host+'/country.csv';
     var csv_filename = host+'/country.csv';
-  
     var obj = {
       content: data,
       csv_filename: csv_filename,

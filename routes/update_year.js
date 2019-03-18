@@ -32,8 +32,6 @@ function update_year(year,country,event,conn,database,collection,res){
     // console.log(data);;
 
     if(data){
-      // var data = JSON.parse(content);
-      // var data = content
       // CHECK IF COUNTRY EXISTS
       var country_data = data[country];
       if(typeof country_data !== 'undefined'){  //the country exists
@@ -44,7 +42,6 @@ function update_year(year,country,event,conn,database,collection,res){
         data[country] = country_data;
         delete data['_id'];//delete the id as this will be provided by mongodb
         // TYPE MESSAGE FOR SYSTEM ADMIN
-        // console.log(data)
         // DROP the ORIGINAL & WRITE THE UPDATE TO database
         conn.db(database).collection(collection).deleteOne({"year":year},(err,res)=>{
           if(err) throw err;
@@ -92,14 +89,11 @@ function update_year(year,country,event,conn,database,collection,res){
     if(!data){ //the year doesn't exist
     var new_country = {};
       var event_array = [];
-      event_array.push(event);
-      
+      event_array.push(event); 
       new_country.year = year;
       new_country[country] = event_array;
-
       // TYPE MESSAGE FOR SYSTEM ADMIN
       // console.log('adding to country database - new file'+ filename + ' new data '+ new_country)
-     
       conn.db(database).collection(collection).insertOne(new_country,(err,res)=>{
         if(err) throw err;
         console.log(res.opts);
