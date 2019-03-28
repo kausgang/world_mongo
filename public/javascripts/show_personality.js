@@ -216,10 +216,14 @@ function show_personality(year,country_name){
                 .attr("ry",5)
                 .attr("width",function(d){
 
-                    var geography = d.geography;
+                    // var geography = d.geography;
                     // if(geography == country_name){
-                        var age = (year - parseInt(d.born))*7;
-                        return age; //MULTIPLYING WITH 7 SO THAT THE WIDTH TAKES UP SOME SPACE IN SVG
+                        var age = (year - parseInt(d.born))*7;  //MULTIPLYING WITH 7 SO THAT THE WIDTH TAKES UP SOME SPACE IN SVG
+                        
+                        if(age >=700)
+                            return 700; //RETURNING 700 AS THE WIDTH THAT CAN BE SHOWN IS 700 PIXEL
+                        else
+                            return age;
                     // }
                 })
                 .attr("height",age_thickness)
@@ -317,7 +321,10 @@ function show_personality(year,country_name){
                 .attr("x",function(d,i){
                     var rect_x = cx + circle_radius+10;
                     var age = (year - parseInt(d.born))*7;
-                    var text_x = rect_x + age + 10 ;
+                    if(age>=700)
+                        var text_x = rect_x + 700 + 10 ;
+                    else
+                        var text_x = rect_x + age + 10 ;
 
                     var geography = d.geography;
                     // if(geography == country_name){
